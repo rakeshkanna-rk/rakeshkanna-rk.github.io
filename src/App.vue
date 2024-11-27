@@ -1,7 +1,10 @@
 <template>
   <div>
+    <Particles />
     <NavBar />
     <HeadLine />
+    <FieldList />
+
 </div>
 </template>
 
@@ -9,12 +12,16 @@
 
 import NavBar from './NavBar.vue';
 import HeadLine from './components/HeadLine.vue';
+import Particles from './components/Particles.vue';
+import FieldList from './FieldList.vue';
 
 export default {
   name: 'App',
   components: {
+    Particles,
     NavBar,
     HeadLine,
+    FieldList
   },
   
   data() {
@@ -30,11 +37,10 @@ export default {
 body{
   background: var(--bg-color);
   margin: 0;
-  cursor: url("./assets/cursor.svg"), auto;
+  cursor: url("./assets/cursor.svg"), pointer;
 }
 
 #app {
-  height: 100vh;
   padding: 30px 80px;
 }
 

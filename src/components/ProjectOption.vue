@@ -20,13 +20,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .prj-option {
   border-radius: 35px;
   border-style: solid;
   border-color: #fefefe;
   border-width: 0.78px;
-  padding: 7.81px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,10 +37,11 @@ export default {
 .image-holder {
   background: #fefefe;
   border-radius: 78.12px;
-  padding: 7.81px;
+  padding: 10px;
+  gap: 16px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-shrink: 0;
   position: relative;
 }
@@ -54,11 +55,12 @@ export default {
 }
 
 .field {
-    color: #050505;
+  color: #050505;
   text-align: left;
-  font-family: "Calibri-Regular", sans-serif;
+  font-family: "Archivo", sans-serif;
   font-size: 18.75px;
   font-weight: 400;
   position: relative;
 }
+
 </style>
