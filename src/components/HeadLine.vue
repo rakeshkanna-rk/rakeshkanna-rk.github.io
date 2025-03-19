@@ -26,7 +26,6 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex-shrink: 0;
   position: relative;
   padding: 30px 0 0 0;
 }
@@ -48,7 +47,6 @@ export default {
   font-size: 32px;
   font-weight: 800;
   position: relative;
-  align-self: stretch;
   margin: 0;
 }
 

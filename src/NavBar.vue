@@ -1,8 +1,21 @@
 <template>
   <div class="navbar">
-    <img class="logo" src="./assets/logo.svg" />
+    <img
+      class="logo"
+      src="./assets/logo.svg"
+      v-motion
+      :initial="{ opacity: 0, y: -50 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+    />/>
 
-    <div class="social-link-container">
+    <div
+      class="social-link-container"
+      v-motion
+      :initial="{ opacity: 0, y: -50 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+    >
       <SocialLink
         v-for="(social, index) in socialLinks"
         :key="index"
@@ -12,7 +25,13 @@
       />
     </div>
 
-    <div class="low-social-link-container">
+    <div
+      class="low-social-link-container"
+      v-motion
+      :initial="{ opacity: 0, y: 50 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+    >
       <div class="holder">
         <LowSocialLink
           v-for="(social, index) in socialLinks"
@@ -97,8 +116,8 @@ export default {
   }
 
   .logo {
-  height: 45px;
-  width: auto;
+    height: 45px;
+    width: auto;
   }
 }
 </style>

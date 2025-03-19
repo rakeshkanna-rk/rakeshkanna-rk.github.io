@@ -62,7 +62,7 @@
     width: 100%;
     height: 100vh;
     position: absolute;
-    z-index: 0;
+    z-index: 2;
     top: 0;
     left: 0;
   }
