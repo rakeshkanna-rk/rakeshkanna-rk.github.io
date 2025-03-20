@@ -9,23 +9,20 @@
       >
       <HeadLine />
     </div>
-    <FieldList />
   </div>
 </template>
 
 <script>
-import NavBar from "./NavBar.vue";
+import NavBar from "./components/NavBar.vue";
 import HeadLine from "./components/HeadLine.vue";
 import Particles from "./components/Particles.vue";
-import FieldList from "./FieldList.vue";
 
 export default {
   name: "App",
   components: {
     Particles,
     NavBar,
-    HeadLine,
-    FieldList,
+    HeadLine
   },
 
   data() {
@@ -35,11 +32,6 @@ export default {
 </script>
 
 <style>
-body {
-  background: var(--bg-color);
-  margin: 0;
-  cursor: url("./assets/cursor.svg"), pointer;
-}
 
 #app {
   padding: 30px 80px;
@@ -50,4 +42,5 @@ body {
     padding: 30px 30px;
   }
 }
+
 </style>

@@ -2,7 +2,7 @@
   <div class="navbar">
     <img
       class="logo"
-      src="./assets/logo.svg"
+      src="../assets/logo.svg"
       v-motion
       :initial="{ opacity: 0, y: -50 }"
       :visible="{ opacity: 1, y: 0 }"
@@ -46,9 +46,9 @@
 </template>
 
 <script>
-import socialLinks from "./data/socialLinks.json";
-import SocialLink from "./components/SocialLink.vue";
-import LowSocialLink from "./components/LowSocialLink.vue";
+import socialLinks from "../data/socialLinks.json";
+import SocialLink from "../components/SocialLink.vue";
+import LowSocialLink from "../components/LowSocialLink.vue";
 
 export default {
   name: "NavBar",

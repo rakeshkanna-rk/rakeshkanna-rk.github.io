@@ -27,7 +27,13 @@ export default {
   justify-content: center;
   text-align: center;
   position: relative;
-  padding: 30px 0 0 0;
+  padding: 150px 0 ;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 80px 0;
+  }
 }
 
 .content {

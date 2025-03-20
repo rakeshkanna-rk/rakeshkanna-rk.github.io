@@ -5,5 +5,10 @@
 }
 
 html {
-  cursor: url("./img/cursor.svg"), pointer;
+  cursor: url("./assets/cursor.svg"), auto;
+}
+
+body {
+  background: var(--bg-color);
+  margin: 0;
 }
