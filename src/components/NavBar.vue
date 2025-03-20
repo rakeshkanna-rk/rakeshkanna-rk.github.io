@@ -47,8 +47,8 @@
 
 <script>
 import socialLinks from "../data/socialLinks.json";
-import SocialLink from "../components/SocialLink.vue";
-import LowSocialLink from "../components/LowSocialLink.vue";
+import SocialLink from "./sub-components/SocialLink.vue";
+import LowSocialLink from "./sub-components/LowSocialLink.vue";
 
 export default {
   name: "NavBar",
