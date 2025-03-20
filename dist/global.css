@@ -1,0 +1,14 @@
+:root {
+  --bg-color: #050505;
+  --h-font: "Coda", system-ui;
+  --side-pad: 0 80px;
+}
+
+html {
+  cursor: url("./assets/cursor.svg"), auto;
+}
+
+body {
+  background: var(--bg-color);
+  margin: 0;
+}
