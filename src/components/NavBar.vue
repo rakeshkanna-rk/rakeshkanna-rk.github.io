@@ -1,5 +1,6 @@
 <template>
   <div class="navbar">
+    <MobiMenu :pages="pages" :isOpen="isMenuOpen" @close="isMenuOpen = false" />
     <img
       class="logo"
       src="../assets/logo.svg"
@@ -7,7 +8,16 @@
       :initial="{ opacity: 0, y: -50 }"
       :visible="{ opacity: 1, y: 0 }"
       :duration="500"
-    />/>
+    />
+    <img
+      class="handburger-menu"
+      src="../assets/handburger-menu.svg"
+      @click="isMenuOpen = !isMenuOpen"
+      v-motion
+      :initial="{ opacity: 0, y: -50 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+    />
 
     <div
       class="social-link-container"
@@ -24,43 +34,32 @@
         :title="social.title"
       />
     </div>
-
-    <div
-      class="low-social-link-container"
-      v-motion
-      :initial="{ opacity: 0, y: 50 }"
-      :visible="{ opacity: 1, y: 0 }"
-      :duration="500"
-    >
-      <div class="holder">
-        <LowSocialLink
-          v-for="(social, index) in socialLinks"
-          :key="index"
-          :link="social.link"
-          :img="social.img"
-          :title="social.title"
-        />
-      </div>
-    </div>
   </div>
 </template>
 
+<script setup>
+import { ref } from "vue";
+const isMenuOpen = ref(false);
+</script>
+
 <script>
 import socialLinks from "../data/socialLinks.json";
+import pages from "../data/pages.json";
 import SocialLink from "./sub-components/SocialLink.vue";
-import LowSocialLink from "./sub-components/LowSocialLink.vue";
+import MobiMenu from "./sub-components/MobiMenu.vue";
 
 export default {
   name: "NavBar",
 
   components: {
     SocialLink,
-    LowSocialLink,
+    MobiMenu,
   },
 
   data() {
     return {
       socialLinks,
+      pages,
     };
   },
 };
@@ -73,8 +72,10 @@ export default {
   align-items: center;
   justify-content: space-between;
   align-self: stretch;
-  flex-shrink: 0;
   position: relative;
+  flex-shrink: 0;
+  padding: var(--padding);
+  z-index: 3;
 }
 
 .social-link-container {
@@ -87,34 +88,21 @@ export default {
   gap: 18px;
 }
 
-.low-social-link-container {
-  /*W3C*/
+.handburger-menu {
   display: none;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-.holder {
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
 }
 
 @media screen and (max-width: 601px) {
   .social-link-container {
     display: none;
   }
-  .low-social-link-container {
+  .handburger-menu {
     display: block;
   }
   .navbar {
-    justify-content: center;
-  }
+    padding: var(--mobi-padding);
 
+  }
   .logo {
     height: 45px;
     width: auto;

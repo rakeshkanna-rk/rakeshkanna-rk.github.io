@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Home",
+        "link" : "/",
+        "icon" : "home",
+        "desc" : "My work-in-progress"
+    },
+    {
+        "title": "About",
+        "link" : "/about",
+        "icon" : "user",
+        "desc" : "Know more about me"
+    },
+    {
+        "title": "Projects",
+        "link" : "/projects",
+        "icon" : "layout",
+        "desc" : "My project showcase"
+    },
+    {
+        "title": "Blog",
+        "link" : "/blog",
+        "icon" : "file-text",
+        "desc" : "Writing, Thinking, and Sharing"
+    },
+    {
+        "title" : "Links",
+        "link" : "/links",
+        "icon" : "link",
+        "desc" : "All my links are here"
+    }
+
+]

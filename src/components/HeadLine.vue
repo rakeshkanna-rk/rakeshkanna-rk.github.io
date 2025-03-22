@@ -1,15 +1,20 @@
 <template>
   <div class="header">
     <h1 class="title">{{ headLine.title }}</h1>
+    <Shimmer :text="headLine.single" />
     <p class="content">{{ headLine.content }}</p>
   </div>
 </template>
 
 <script>
 import headLine from "../data/headLines.json";
+import Shimmer from "./sub-components/Shimmer.vue";
 
 export default {
   name: "HeadLine",
+  components: {
+    Shimmer,
+  },
   data() {
     return {
       headLine,
@@ -18,7 +23,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .header {
   display: flex;
   flex-direction: column;
@@ -27,46 +32,42 @@ export default {
   justify-content: center;
   text-align: center;
   position: relative;
-  padding: 150px 0 ;
+  padding: 100px 0;
 }
 
-@media screen and (max-width: 600px) {
-  .header {
-    padding: 80px 0;
-  }
-}
-
-.content {
+p {
   color: #fefefe;
   text-align: center;
   font-family: var(--h-font);
-  font-size: 16px;
+  font-size: var(--h3);
   font-weight: 400;
   position: relative;
   max-width: 800px;
 }
 
-.title {
+h1 {
   color: #fefefe;
   text-align: center;
-  font-family: var(--h-font);
-  font-size: 32px;
-  font-weight: 800;
+  font-family: var(--primary-font);
+  font-size: var(--h1);
+  font-weight: 700;
   position: relative;
   margin: 0;
+  max-width: 800px;
 }
 
 @media screen and (max-width: 600px) {
-  .title {
-    font-size: 24px;
-    line-height: 35px;
+  h1 {
+    font-size: 28px;
+    line-height: 1.7em;
   }
-  .content {
-    font-size: 12px;
+  p {
+    font-size: 18px;
+    line-height: 1.75em;
   }
   .header {
+    padding: 70px 15px;
     gap: 0;
   }
-
 }
 </style>
