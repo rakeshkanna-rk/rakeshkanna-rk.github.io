@@ -28,28 +28,26 @@
   );
 }
 
-html {
-  cursor: url("./assets/cursor.svg"), auto;
-}
-
-a, button, input, textarea, select {
-  cursor: url("./assets/click-cursor.svg"), pointer;
-}
-
 body {
   background: var(--bg-color);
   margin: 0;
 }
 
-/* #app {
-  padding: 30px 80px;
+.custom-cursor {
+  width: 15px;
+  height: 15px;
+  background-color: #149ED4;
+  filter: blur(2px);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease, transform 0.1s ease-out;
 }
 
-@media screen and (max-width: 600px) {
-  #app {
-    padding: 30px 30px;
-  }
-} */
+html {
+  scroll-behavior: smooth;
+}
 
 
 /* Apply scrollbar styles */

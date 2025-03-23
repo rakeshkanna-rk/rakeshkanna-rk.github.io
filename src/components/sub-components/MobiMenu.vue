@@ -29,10 +29,19 @@
 </template>
 
 <script setup>
-defineProps({ isOpen: Boolean, pages: Array });
+import { watchEffect } from "vue";
+
+const props = defineProps({ isOpen: Boolean, pages: Array });
 const emit = defineEmits(["close"]);
+
 const closeMenu = () => emit("close");
+
+// Prevent scrolling when menu is open
+watchEffect(() => {
+  document.body.style.overflow = props.isOpen ? "hidden" : "";
+});
 </script>
+
 
 <script>
 export default {
@@ -83,7 +92,7 @@ export default {
   position: absolute;
   top: 20px;
   right: 15px;
-  z-index: 3;
+  z-index: 2;
 }
 
 .img-holder {
@@ -119,7 +128,7 @@ export default {
   justify-content: start;
   width: 100%;
   height: 100vh;
-  z-index: 5;
+  z-index: 2;
   left: 0;
   background-color: #000000;
   gap: 20px;

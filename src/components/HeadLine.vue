@@ -1,29 +1,86 @@
 <template>
   <div class="header">
-    <h1 class="title">{{ headLine.title }}</h1>
-    <Shimmer :text="headLine.single" />
-    <p class="content">{{ headLine.content }}</p>
+    <h1
+      class="title"
+      v-motion
+      :initial="{ opacity: 0, y: 100 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+    >
+      {{ headLine.title }}
+    </h1>
+    <Shimmer
+      :text="headLine.single"
+      v-motion
+      :initial="{ opacity: 0, y: 100 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+      :delay="200"
+    />
+    <p
+      class="content"
+      v-motion
+      :initial="{ opacity: 0, y: 100 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+      :delay="400"
+    >
+      {{ headLine.content }}
+    </p>
+    <GlassButton
+      @openForm="showForm = true"
+      v-motion
+      :initial="{ opacity: 0, y: 50 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+      :delay="600"
+    />
+
+    <ContactForm
+      v-motion
+      :initial="{ opacity: 0, y: 50 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="500"
+      :isOpen="showForm"
+      @close="showForm = false"
+    />
   </div>
 </template>
 
 <script>
 import headLine from "../data/headLines.json";
 import Shimmer from "./sub-components/Shimmer.vue";
+import GlassButton from "./sub-components/GlassButton.vue";
+import ContactForm from "./ContactForm.vue";
 
 export default {
   name: "HeadLine",
   components: {
     Shimmer,
+    GlassButton,
+    ContactForm,
   },
   data() {
     return {
       headLine,
+      showForm: false,
     };
   },
 };
 </script>
 
 <style scoped>
+/* .form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 .header {
   display: flex;
   flex-direction: column;
@@ -32,7 +89,7 @@ export default {
   justify-content: center;
   text-align: center;
   position: relative;
-  padding: 100px 0;
+  padding: 70px 0;
 }
 
 p {

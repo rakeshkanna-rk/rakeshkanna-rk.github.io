@@ -45,7 +45,7 @@ export default {
   width: 100%;
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(5px);
-  z-index: 1;
+  z-index: 3;
   /* border: 2px solid rgba(255, 255, 255, 0.1); */
   outline: 2px solid rgba(255, 255, 255, 0.1);
   

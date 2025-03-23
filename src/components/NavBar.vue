@@ -4,6 +4,8 @@
     <img
       class="logo"
       src="../assets/logo.svg"
+      title="logo"
+      alt="logo"
       v-motion
       :initial="{ opacity: 0, y: -50 }"
       :visible="{ opacity: 1, y: 0 }"
@@ -14,6 +16,7 @@
       src="../assets/handburger-menu.svg"
       @click="isMenuOpen = !isMenuOpen"
       v-motion
+      title="menu"
       :initial="{ opacity: 0, y: -50 }"
       :visible="{ opacity: 1, y: 0 }"
       :duration="500"
@@ -75,7 +78,7 @@ export default {
   position: relative;
   flex-shrink: 0;
   padding: var(--padding);
-  z-index: 3;
+  z-index: 2;
 }
 
 .social-link-container {

@@ -23,9 +23,3 @@ export default {
 };
 </script>
 
-<style scoped>
-a {
-  cursor: url("../../assets/cursor.svg"), auto;
-}
-
-</style>

@@ -1,12 +1,7 @@
 <template>
   <div>
     <!-- <Particles /> -->
-    <div
-      v-motion
-      :initial="{ opacity: 0, y: 100 }"
-      :visible="{ opacity: 1, y: 0 }"
-      :duration="500"
-    >
+    <div>
       <HeadLine />
     </div>
   </div>
