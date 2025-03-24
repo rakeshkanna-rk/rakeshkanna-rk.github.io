@@ -1,0 +1,80 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cambo");
+
+/* ICONS */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --bg-color: linear-gradient(
+    191.62deg,
+    rgba(8, 0, 16, 1) 0%,
+    rgb(12, 0, 23) 100%
+  );
+  --h-font: "Coda", system-ui;
+  --primary-font: "Poppins", sans-serif;
+  --style-font: "Cambo", serif;
+  --side-pad: 0 80px;
+  --padding: 20px 80px;
+  --mobi-padding: 20px 15px;
+  --h1: 48px;
+  --h2: 30px;
+  --h3: 20px;
+  --p: 16px;
+  --white-text-gradiant: linear-gradient(
+    180deg,
+    rgba(152, 152, 152, 1) 0%,
+    rgba(254, 254, 254, 1) 100%
+  );
+  --blue-color: #149ed4;
+  --dark-blue-color: #000986;
+  --green-color: #14d42a;
+  --red-color: #FF0000;
+  --white-color: #fefefe;
+}
+
+body {
+  background: var(--bg-color);
+  margin: 0;
+}
+
+::selection {
+  background: var(--dark-blue-color);
+  color: white; 
+  text-shadow: 2px 2px 4px black;
+}
+
+
+.custom-cursor {
+  width: 15px;
+  height: 15px;
+  background-color: #149ED4;
+  filter: blur(2px);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease, transform 0.1s ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Apply scrollbar styles */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background:var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
