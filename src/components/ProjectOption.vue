@@ -24,7 +24,7 @@ export default {
 .prj-option {
   border-radius: 35px;
   border-style: solid;
-  border-color: #fefefe;
+  border-color: var(--white-color);
   border-width: 0.78px;
   padding: 10px;
   display: flex;
@@ -35,7 +35,7 @@ export default {
 }
 
 .image-holder {
-  background: #fefefe;
+  background: var(--white-color);
   border-radius: 78.12px;
   padding: 10px;
   gap: 16px;

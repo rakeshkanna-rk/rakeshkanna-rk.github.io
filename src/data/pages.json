@@ -3,31 +3,36 @@
         "title": "Home",
         "link" : "/",
         "icon" : "home",
-        "desc" : "My work-in-progress"
+        "desc" : "My work-in-progress",
+        "delay" : 0
     },
     {
         "title": "About",
         "link" : "/about",
         "icon" : "user",
-        "desc" : "Know more about me"
+        "desc" : "Know more about me",
+        "delay" : 200
     },
     {
         "title": "Projects",
         "link" : "/projects",
         "icon" : "layout",
-        "desc" : "My project showcase"
+        "desc" : "My project showcase",
+        "delay" : 400
     },
     {
         "title": "Blog",
         "link" : "/blog",
         "icon" : "file-text",
-        "desc" : "Writing, Thinking, and Sharing"
+        "desc" : "Writing, Thinking, and Sharing",
+        "delay" : 600
     },
     {
         "title" : "Links",
         "link" : "/links",
         "icon" : "link",
-        "desc" : "All my links are here"
+        "desc" : "All my links are here",
+        "delay" : 800
     }
 
 ]

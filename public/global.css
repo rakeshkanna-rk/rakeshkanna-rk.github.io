@@ -26,12 +26,24 @@
     rgba(152, 152, 152, 1) 0%,
     rgba(254, 254, 254, 1) 100%
   );
+  --blue-color: #149ed4;
+  --dark-blue-color: #000986;
+  --green-color: #14d42a;
+  --red-color: #FF0000;
+  --white-color: #fefefe;
 }
 
 body {
   background: var(--bg-color);
   margin: 0;
 }
+
+::selection {
+  background: var(--dark-blue-color);
+  color: white; 
+  text-shadow: 2px 2px 4px black;
+}
+
 
 .custom-cursor {
   width: 15px;

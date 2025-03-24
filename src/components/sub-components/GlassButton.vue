@@ -10,7 +10,15 @@
       >
         Connect
       </p>
-      <img src="@/assets/arrow-right.svg" alt="arrow" />
+      <img
+        src="@/assets/arrow-right.svg"
+        alt="arrow"
+        v-motion
+        :initial="{ rotate: -90}"
+        :visible="{ rotate: 0}"
+        :duration="500"
+        :delay="1000"
+      />
     </a>
   </div>
 </template>

@@ -23,6 +23,11 @@
         <p>Your message has been sent.</p>
         <button @click="closeForm">Close</button>
       </div>
+
+      <!-- Error Message -->
+      <div v-if="error" class="error-message">
+        <p>{{ error }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +43,7 @@ export default {
       email: "",
       message: "",
       submitted: false,
+      error: null,
       loading: false,
     };
   },
@@ -59,9 +65,10 @@ export default {
           body: formData,
           mode: "no-cors", // Prevents CORS errors
         });
-
+        this.error = null;
         this.submitted = true; // Show success message
       } catch (error) {
+        this.error = "An error occurred. Please try again.";
         console.error("Error submitting form:", error);
       }
 
@@ -79,6 +86,11 @@ export default {
 </script>
 
 <style scoped>
+
+.error-message {
+  color: var(--red-color)
+}
+
 .overlay {
   position: fixed;
   top: 0;

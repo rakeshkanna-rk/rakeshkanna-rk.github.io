@@ -1,5 +1,11 @@
 <template>
   <div class="header">
+    <ProjHeadBtn
+      v-motion
+      :initial="{ opacity: 0, y: 50 }"
+      :visible="{ opacity: 1, y: 0 }"
+      :duration="250"
+      />
     <h1
       class="title"
       v-motion
@@ -52,6 +58,7 @@ import headLine from "../data/headLines.json";
 import Shimmer from "./sub-components/Shimmer.vue";
 import GlassButton from "./sub-components/GlassButton.vue";
 import ContactForm from "./ContactForm.vue";
+import ProjHeadBtn from "./sub-components/ProjHeadBtn.vue";
 
 export default {
   name: "HeadLine",
@@ -59,6 +66,7 @@ export default {
     Shimmer,
     GlassButton,
     ContactForm,
+    ProjHeadBtn,
   },
   data() {
     return {
@@ -70,16 +78,6 @@ export default {
 </script>
 
 <style scoped>
-/* .form {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .header {
   display: flex;
@@ -89,11 +87,11 @@ export default {
   justify-content: center;
   text-align: center;
   position: relative;
-  padding: 70px 0;
+  padding: 30px 0;
 }
 
 p {
-  color: #fefefe;
+  color: var(--white-color);
   text-align: center;
   font-family: var(--h-font);
   font-size: var(--h3);
@@ -103,7 +101,7 @@ p {
 }
 
 h1 {
-  color: #fefefe;
+  color: var(--white-color);
   text-align: center;
   font-family: var(--primary-font);
   font-size: var(--h1);
@@ -123,7 +121,7 @@ h1 {
     line-height: 1.75em;
   }
   .header {
-    padding: 70px 15px;
+    padding: 30px 15px;
     gap: 0;
   }
 }

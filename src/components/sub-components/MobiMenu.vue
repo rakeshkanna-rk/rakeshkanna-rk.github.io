@@ -1,6 +1,14 @@
 <template>
   <div class="menu" :class="{ active: isOpen }">
-    <img class="close-icon" src="../../assets/close.svg" @click="closeMenu" />
+    <img
+      class="close-icon"
+      src="../../assets/close.svg"
+      @click="closeMenu"
+      v-motion
+      :initial="{ rotate: 180 }"
+      :visible="{ rotate: 0 }"
+      :duration="800"
+    />/>
 
     <div class="menu-holder">
       <TransitionGroup name="fade">
@@ -9,9 +17,10 @@
           v-for="(page, index) in pages"
           :key="index"
           v-motion
-          :initial="{ opacity: 0, y: -100 }"
-          :visible="{ opacity: 1, y: 0 }"
+          :initial="{ opacity: 0, x: 100 }"
+          :visible="{ opacity: 1, x: 0 }"
           :duration="500"
+          :delay="index * 200"
         >
           <a class="item wrap" :href="page.link">
             <div class="img-holder">
@@ -41,7 +50,6 @@ watchEffect(() => {
   document.body.style.overflow = props.isOpen ? "hidden" : "";
 });
 </script>
-
 
 <script>
 export default {
@@ -78,7 +86,7 @@ export default {
 .desc {
   font-family: var(--primary-font);
   font-size: var(--p);
-  color: #fefefe;
+  color: var(--white-color);
   opacity: 0.7;
   margin: 0;
 }
@@ -118,7 +126,7 @@ export default {
   flex-shrink: 0;
   position: relative;
   gap: 20px;
-  padding:100px 0 0 0;
+  padding: 80px 0 0 0;
 }
 
 .menu {
@@ -150,7 +158,7 @@ export default {
 }
 
 .item {
-  color: #fefefe;
+  color: var(--white-color);
   text-align: center;
   font-family: var(--primary-font);
   font-size: var(--h3);
