@@ -46,7 +46,6 @@ h1 {
   text-shadow: 0 0 50px #00E5FF, 0 0 20px #00E5FF, 0 0 40px #00E5FF;
   letter-spacing: 0.1em;
   line-height: .5;
-  cursor: url("../assets/click-cursor.svg"), pointer;
 }
 
 p {
@@ -57,12 +56,12 @@ p {
 .countdown {
   font-size: 24px;
   font-weight: bold;
-  color: #007bff;
+  color: var(--blue-color);
 }
 
 .home-link {
   text-decoration: none;
-  color: #007bff;
+  color: var(--blue-color);
   font-weight: bold;
 }
 </style>

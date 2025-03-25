@@ -12,16 +12,17 @@
       :duration="500"
     />
     <img
-      class="handburger-menu"
-      src="../assets/handburger-menu.svg"
-      @click="isMenuOpen = !isMenuOpen"
-      v-motion
-      title="menu"
-      :initial="{ opacity: 0, y: -50 }"
-      :visible="{ opacity: 1, y: 0 }"
-      :duration="500"
+    class="handburger-menu"
+    src="../assets/handburger-menu.svg"
+    @click="isMenuOpen = !isMenuOpen"
+    v-motion
+    title="menu"
+    :initial="{ opacity: 0, y: -50 }"
+    :visible="{ opacity: 1, y: 0 }"
+    :duration="500"
     />
-
+    
+    <LargeMenu :pages="pages" />
     <div
       class="social-link-container"
       v-motion
@@ -50,6 +51,7 @@ import socialLinks from "../data/socialLinks.json";
 import pages from "../data/pages.json";
 import SocialLink from "./sub-components/SocialLink.vue";
 import MobiMenu from "./sub-components/MobiMenu.vue";
+import LargeMenu from "./sub-components/LargeMenu.vue";
 
 export default {
   name: "NavBar",
@@ -57,6 +59,7 @@ export default {
   components: {
     SocialLink,
     MobiMenu,
+    LargeMenu,
   },
 
   data() {

@@ -8,7 +8,7 @@
       :initial="{ rotate: 180 }"
       :visible="{ rotate: 0 }"
       :duration="800"
-    />/>
+    />
 
     <div class="menu-holder">
       <TransitionGroup name="fade">
@@ -21,8 +21,13 @@
           :visible="{ opacity: 1, x: 0 }"
           :duration="500"
           :delay="index * 200"
+          :class="{ 'active-page': route.path === page.link }"
         >
-          <a class="item wrap" :href="page.link">
+          <router-link
+            class="item wrap"
+            :to="page.link"
+            @click="closeMenu"
+          >
             <div class="img-holder">
               <img class="icon" :src="`./icons/${page.icon}.svg`" />
             </div>
@@ -30,7 +35,7 @@
               <a class="item" :href="page.link">{{ page.title }}</a>
               <p class="desc">{{ page.desc }}</p>
             </div>
-          </a>
+          </router-link>
         </div>
       </TransitionGroup>
     </div>
@@ -39,9 +44,11 @@
 
 <script setup>
 import { watchEffect } from "vue";
+import { useRoute } from "vue-router";
 
 const props = defineProps({ isOpen: Boolean, pages: Array });
 const emit = defineEmits(["close"]);
+const route = useRoute(); // Fix: Use Vue Router's `useRoute()`
 
 const closeMenu = () => emit("close");
 
@@ -56,11 +63,16 @@ export default {
   name: "MobiMenu",
   props: {
     pages: Array,
-  },
+  }
 };
 </script>
 
 <style scoped>
+.active-page {
+  background: var(--glass-color-05);
+  border-radius: 20px;
+}
+
 .wrap {
   display: flex;
   flex-direction: row;

@@ -31,6 +31,11 @@
   --green-color: #14d42a;
   --red-color: #FF0000;
   --white-color: #fefefe;
+  --glass-color-01: rgba(255, 255, 255, 0.01);
+  --glass-color-02: rgba(255, 255, 255, 0.02);
+  --glass-color-03: rgba(255, 255, 255, 0.03);
+  --glass-color-04: rgba(255, 255, 255, 0.04);
+  --glass-color-05: rgba(255, 255, 255, 0.05);
 }
 
 body {

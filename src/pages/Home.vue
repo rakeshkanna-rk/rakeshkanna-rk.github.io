@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <Particles /> -->
-    <div>
+    <div class="hero">
       <HeadLine />
     </div>
   </div>
@@ -23,3 +23,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+}
+</style>
