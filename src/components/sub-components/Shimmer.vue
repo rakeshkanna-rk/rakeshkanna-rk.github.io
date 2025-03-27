@@ -12,12 +12,19 @@
   animation: shimmer 1.5s infinite linear;
 
   text-align: center;
-  font-family: var(--style-font);
-  font-size: var(--h2);
+  font-family: var(--playball-font);
+  font-size: var(--h1);
   font-weight: 400;
   position: relative;
   margin: 0;
   line-height: 1.9;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 601px) {
+  .shimmer-text {
+    font-size: calc(var(--h1) * 0.75);
+  }
 }
 
 @keyframes shimmer {

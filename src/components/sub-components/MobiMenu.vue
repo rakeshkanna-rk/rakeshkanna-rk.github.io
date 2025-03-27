@@ -121,13 +121,9 @@ export default {
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  background: radial-gradient(
-    closest-side,
-    rgba(51, 51, 51, 1) 0%,
-    rgba(35, 35, 35, 1) 100%
-  );
+  background: var(--radial-black);
   border-radius: 10px;
-  border: 2px solid #464646;
+  border: var(--black-boarder);
 }
 
 .menu-holder {

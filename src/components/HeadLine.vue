@@ -71,7 +71,7 @@ export default {
   data() {
     return {
       headLine,
-      showForm: false,
+      showForm: false
     };
   },
 };
@@ -93,9 +93,8 @@ export default {
 p {
   color: var(--white-color);
   text-align: center;
-  font-family: var(--h-font);
+  font-family: var(--primary-font);
   font-size: var(--h3);
-  font-weight: 400;
   position: relative;
   max-width: 800px;
 }
