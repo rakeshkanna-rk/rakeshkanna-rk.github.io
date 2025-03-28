@@ -4,7 +4,7 @@
       v-for="(char, index) in text"
       :key="index"
       class="char"
-      :style="{ opacity: index <= hoverIndex ? 1 : 0.3 }"
+      :style="{ opacity: index <= hoverIndex ? 1 : 0.5}"
       @mouseover="hoverIndex = index"
       @mouseleave="hoverIndex = -1"
     >

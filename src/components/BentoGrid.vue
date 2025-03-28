@@ -2,13 +2,14 @@
   <div class="bento">
     <div class="top"><HoverText text="Design. Develop. Inspire." /></div>
     <div class="bottom">
-      <div class="left"><MarqueTechStack /> 
+      <div class="btm1"><MarqueTechStack /> 
       <div class="tech-text">
         <h1>My Tech Stack</h1>
         <p>The Technologies I Use to build my projects</p>
       </div>
       </div>
-      <div class="right"></div>
+      <div class="btm2"></div>
+      <div class="btm3"></div>
     </div>
   </div>
 </template>
@@ -40,14 +41,17 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   justify-content: center;
 }
 
-.bottom .left,
-.bottom .right {
+.bottom .btm1,
+.bottom .btm2,
+.bottom .btm3 {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
   padding: 0 30px;
   background: var(--glass-color-05);
   backdrop-filter: blur(10px);
   border: var(--black-boarder);
   border-radius: 20px;
-  width: 30%;
 }
 
 .top {
@@ -68,21 +72,34 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   gap: 10px;
 }
 
-.bottom .left {
+.bottom .btm1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 1;
+  flex-grow: 1;
   overflow: hidden;
 }
 
-.bottom .right {
+.bottom .btm2 {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 1;
   height: 10px;
   overflow: hidden;
+  flex-grow: 1;
+  width: 30%;
+}
+
+.bottom .btm3 {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+  height: 10px;
+  overflow: hidden;
+  width: 30%;
 }
 
 .tech-text {
@@ -111,6 +128,7 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   font-weight: 900;
   font-size: var(--h2);
   text-align: center;
+  /* line-height: 0%; */
   
 }
 
@@ -122,7 +140,7 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   align-self: stretch;
 }
 
-.left:hover .tech-text {
+.btm1:hover .tech-text {
   bottom: 0;
 }
 
@@ -135,8 +153,8 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   .top {
     font-size: var(--h2);
   }
-  .bottom .left,
-  .bottom .right {
+  .bottom .btm1,
+  .bottom .btm2 {
     width: 100%;
   }
 }
