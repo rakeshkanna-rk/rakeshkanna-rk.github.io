@@ -1,5 +1,5 @@
 <template>
-  <a href="/projects" class="glass-button">
+  <router-link :to="'/projects'" class="glass-button">
     <div class="new-text">
       <p>New!</p>
     </div>
@@ -9,13 +9,13 @@
     <div class="icon">
       <img src="@/assets/chevron-right.svg" alt="arrow" />
     </div>
-  </a>
+  </router-link>
 </template>
 
-<script>
+<script >
 export default {
-  name: "GlassSubButton",
-};
+  name: "ProjHeadBtn",
+}
 </script>
 
 <style scoped>

@@ -2,13 +2,16 @@
   <div class="bento">
     <div class="top"><HoverText text="Design. Develop. Inspire." /></div>
     <div class="bottom">
-      <div class="btm1"><MarqueTechStack /> 
-      <div class="tech-text">
-        <h1>My Tech Stack</h1>
-        <p>The Technologies I Use to build my projects</p>
+      <div class="btm1">
+        <MarqueTechStack />
+        <div class="tech-text">
+          <h1>My Tech Stack</h1>
+          <p>The Technologies I Use to build my projects</p>
+        </div>
       </div>
+      <div class="btm2">
+        <LogoWing />
       </div>
-      <div class="btm2"></div>
       <div class="btm3"></div>
     </div>
   </div>
@@ -17,6 +20,7 @@
 <script setup>
 import HoverText from "./sub-components/HoverText.vue";
 import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
+import LogoWing from "./sub-components/LogoWing.vue";
 </script>
 
 <style scoped>
@@ -47,7 +51,6 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   display: flex;
   align-items: center;
   align-self: stretch;
-  padding: 0 30px;
   background: var(--glass-color-05);
   backdrop-filter: blur(10px);
   border: var(--black-boarder);
@@ -78,14 +81,13 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   justify-content: center;
   flex-grow: 1;
   overflow: hidden;
+  padding: 0 30px;
 }
 
 .bottom .btm2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 1;
-  height: 10px;
   overflow: hidden;
   flex-grow: 1;
   width: 30%;
@@ -117,11 +119,10 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   border: var(--black-boarder);
   font-family: var(--primary-font);
   padding: 10px 50px;
-  
+
   width: 90%;
   height: 100%;
   transition: all 0.5s ease-in-out;
-  
 }
 
 .tech-text h1 {
@@ -129,7 +130,6 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
   font-size: var(--h2);
   text-align: center;
   /* line-height: 0%; */
-  
 }
 
 .tech-text p {
@@ -141,6 +141,10 @@ import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
 }
 
 .btm1:hover .tech-text {
+  bottom: 0;
+}
+
+.btm2:hover .tech-text {
   bottom: 0;
 }
 
