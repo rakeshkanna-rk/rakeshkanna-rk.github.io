@@ -5,7 +5,7 @@
       :initial="{ opacity: 0, y: 50 }"
       :visible="{ opacity: 1, y: 0 }"
       :duration="250"
-      />
+    />
     <h1
       class="title"
       v-motion
@@ -33,14 +33,24 @@
     >
       {{ headLine.content }}
     </p>
-    <GlassButton
-      @openForm="showForm = true"
-      v-motion
-      :initial="{ opacity: 0, y: 50 }"
-      :visible="{ opacity: 1, y: 0 }"
-      :duration="500"
-      :delay="600"
-    />
+
+    <div class="cta">
+      <GlassButton
+        @openForm="showForm = true"
+        v-motion
+        :initial="{ opacity: 0, y: 50 }"
+        :visible="{ opacity: 1, y: 0 }"
+        :duration="500"
+        :delay="600"
+      />
+      <EmailCopy
+        v-motion
+        :initial="{ opacity: 0, y: 50 }"
+        :visible="{ opacity: 1, y: 0 }"
+        :duration="500"
+        :delay="800"
+      />
+    </div>
 
     <ContactForm
       v-motion
@@ -59,6 +69,7 @@ import Shimmer from "./sub-components/Shimmer.vue";
 import GlassButton from "./sub-components/GlassButton.vue";
 import ContactForm from "./ContactForm.vue";
 import ProjHeadBtn from "./sub-components/ProjHeadBtn.vue";
+import EmailCopy from "./sub-components/EmailCopy.vue";
 
 export default {
   name: "HeadLine",
@@ -67,18 +78,18 @@ export default {
     GlassButton,
     ContactForm,
     ProjHeadBtn,
+    EmailCopy,
   },
   data() {
     return {
       headLine,
-      showForm: false
+      showForm: false,
     };
   },
 };
 </script>
 
 <style scoped>
-
 .header {
   display: flex;
   flex-direction: column;
@@ -110,6 +121,15 @@ h1 {
   max-width: 800px;
 }
 
+.cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 28px;
@@ -122,6 +142,9 @@ h1 {
   .header {
     padding: 30px 15px;
     gap: 0;
+  }
+  .cta {
+    flex-direction: column;
   }
 }
 </style>

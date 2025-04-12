@@ -1,4 +1,5 @@
 <template>
+  <DraggableBox />
   <Cursor />
   <Particles />
   <NavBar />
@@ -20,6 +21,7 @@ import MobiSocialLink from "./components/MobiSocialLink.vue";
 import Particles from "./components/Particles.vue";
 import ContactForm from "./components/ContactForm.vue";
 import Cursor from "./components/sub-components/Cursor.vue";
+import DraggableBox from "./components/sub-components/DraggableBox.vue";
 
 
 export default {
@@ -29,7 +31,8 @@ export default {
     MobiSocialLink,
     Particles,
     ContactForm,
-    Cursor
+    Cursor,
+    DraggableBox
   },
 
   data() {

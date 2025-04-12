@@ -5,8 +5,16 @@
       <div class="btm1">
         <MarqueTechStack />
         <div class="tech-text">
-          <h1>My Tech Stack</h1>
-          <p>The Technologies I Use to build my projects</p>
+          <h1>Code & Creativity</h1>
+          <p>
+            Driven by Innovation, Fueled by Modern Development Technologies.
+          </p>
+          <router-link
+            class="tech-know-more"
+            :to="{ path: '/', hash: '#skills' }"
+            >Know More <img src="@/assets/arrow-right-white.svg" alt="arrow-right">
+            </router-link
+          >
         </div>
       </div>
       <div class="btm2">
@@ -113,7 +121,7 @@ import LogoWing from "./sub-components/LogoWing.vue";
   overflow: hidden;
   bottom: -110%;
 
-  background: #00000090;
+  background: #000000b8;
   backdrop-filter: blur(10px);
   color: var(--white-color);
   border: var(--black-boarder);
@@ -129,7 +137,7 @@ import LogoWing from "./sub-components/LogoWing.vue";
   font-weight: 900;
   font-size: var(--h2);
   text-align: center;
-  /* line-height: 0%; */
+  line-height: 0%;
 }
 
 .tech-text p {
@@ -146,6 +154,23 @@ import LogoWing from "./sub-components/LogoWing.vue";
 
 .btm2:hover .tech-text {
   bottom: 0;
+}
+
+.tech-know-more {
+  color: var(--white-color);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--primary-font);
+  font-size: var(--h3);
+  font-weight: 600;
+  position: relative;
+  padding: 10px 20px;
+  background-color: #000000c3;
+  border-radius: 20px;
+  text-decoration: none;
+  gap: 15px;
+  border: 1px solid var(--white-color);
 }
 
 @media screen and (max-width: 601px) {
