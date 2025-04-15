@@ -12,6 +12,7 @@ const routes = createRouter({
     { path: "/projects", name: "Projects", component: UnderDev },
     { path: "/blog", name: "Blog", component: UnderDev },
     { path: "/links", name: "Link", component: Links },
+    {path: "/freebies", name: "Freebies", component: UnderDev},
     { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound }, // 404 Route
   ],
 });
