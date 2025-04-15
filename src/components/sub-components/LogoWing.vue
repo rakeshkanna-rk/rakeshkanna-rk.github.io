@@ -24,7 +24,7 @@
 
 <script setup>
 import { ref } from "vue";
-import EmailCopy from "./EmailCopy.vue";
+import EmailCopy from "../buttons/EmailCopy.vue";
 
 const hover = ref(false);
 </script>
@@ -67,7 +67,7 @@ const hover = ref(false);
 }
 
 .cta-text.show {
-    top: 8px;
+  top: 8px;
   opacity: 1;
   scale: 1;
 }

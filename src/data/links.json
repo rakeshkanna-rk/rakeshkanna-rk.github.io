@@ -25,8 +25,15 @@
     "img": "./assets/links/instagram.svg"
   },
   {
-    "link": "/#/freebies",
+    "link": "/download/Rakesh_Resume.pdf",
+    "title": "Resume",
+    "img": "./assets/links/resume.svg",
+    "external": false
+  },
+  {
+    "link": "/freebies",
     "title": "Freebies",
-    "img": "./assets/links/gift.svg"
+    "img": "./assets/links/gift.svg",
+    "external": false
   }
 ]

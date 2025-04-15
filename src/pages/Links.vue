@@ -47,18 +47,21 @@
       </div>
     </div>
     <div class="links" v-for="(link, index) in links" :key="index">
-      <a
-        :href="link.link"
-        target="_blank"
+      <component
+        :is="link.external === false ? 'router-link' : 'a'"
+        :to="link.external === false ? link.link : null"
+        :href="link.external !== false ? link.link : null"
+        :target="link.external !== false ? '_blank' : null"
         v-motion
         :initial="{ opacity: 0, y: 100 }"
         :enter="{ opacity: 1, y: 0 }"
         :duration="500"
         :delay="index * 200"
+        class="link-item"
       >
         <img :src="link.img" alt="Links" />
         {{ link.title }}
-      </a>
+      </component>
     </div>
   </div>
 </template>
@@ -77,30 +80,6 @@ export default {
 </script>
 
 <style scoped>
-
-body {
-    background: #000;
-}
-
-.page-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  padding: 0 0 60px 0;
-}
-
-.bg-img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none; /* Makes sure it doesn’t block clicks */
-}
-
 .header {
   display: flex;
   justify-content: center;
@@ -166,6 +145,7 @@ body {
   z-index: 1;
   position: relative;
   font-family: var(--primary-font);
+  cursor: pointer;
 }
 
 .links a {

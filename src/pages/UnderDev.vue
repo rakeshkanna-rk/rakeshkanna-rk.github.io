@@ -1,4 +1,5 @@
 <template>
+  <img src="@/assets/bg/shape-bg.svg" class="bg-img blur" alt="background image" />
   <div class="under-dev">
     <h1>Under Development</h1>
     <p>You will be able to see the page once it is developed</p>
@@ -13,6 +14,9 @@ export default {
 </script>
 
 <style scoped>
+.blur{
+    filter: blur(10px);
+}
 .under-dev {
   display: flex;
   flex-direction: column;

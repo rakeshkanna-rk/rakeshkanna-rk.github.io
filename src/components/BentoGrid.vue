@@ -12,9 +12,9 @@
           <router-link
             class="tech-know-more"
             :to="{ path: '/', hash: '#skills' }"
-            >Know More <img src="@/assets/arrow-right-white.svg" alt="arrow-right">
-            </router-link
-          >
+            >Know More
+            <img src="@/assets/arrow-right-white.svg" alt="arrow-right" />
+          </router-link>
         </div>
       </div>
       <div class="btm2">
@@ -29,9 +29,9 @@
 
 <script setup>
 import HoverText from "./sub-components/HoverText.vue";
-import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
+import MarqueTechStack from "./marque/MarqueTechStack.vue";
 import LogoWing from "./sub-components/LogoWing.vue";
-import MarqueProjects from "./sub-components/MarqueProjects.vue";
+import MarqueProjects from "./marque/MarqueProjects.vue";
 </script>
 
 <style scoped>

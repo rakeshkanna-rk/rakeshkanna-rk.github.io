@@ -66,10 +66,10 @@
 <script>
 import headLine from "../data/headLines.json";
 import Shimmer from "./sub-components/Shimmer.vue";
-import GlassButton from "./sub-components/GlassButton.vue";
+import GlassButton from "./buttons/GlassButton.vue";
 import ContactForm from "./ContactForm.vue";
 import ProjHeadBtn from "./sub-components/ProjHeadBtn.vue";
-import EmailCopy from "./sub-components/EmailCopy.vue";
+import EmailCopy from "./buttons/EmailCopy.vue";
 
 export default {
   name: "HeadLine",

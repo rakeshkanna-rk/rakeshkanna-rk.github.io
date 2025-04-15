@@ -19,7 +19,7 @@
 import NavBar from "./components/NavBar.vue";
 import MobiSocialLink from "./components/MobiSocialLink.vue";
 import ContactForm from "./components/ContactForm.vue";
-import Cursor from "./components/sub-components/Cursor.vue";
+import Cursor from "./components/Cursor.vue";
 
 
 export default {
