@@ -75,6 +75,25 @@ body {
   transition: background-color 0.3s ease, transform 0.1s ease-out;
 }
 
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 0 60px 0;
+}
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none; /* Makes sure it doesn’t block clicks */
+}
+
 html {
   scroll-behavior: smooth;
 }
