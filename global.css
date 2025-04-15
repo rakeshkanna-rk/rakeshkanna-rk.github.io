@@ -1,6 +1,7 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cambo");
+@import url("https://fonts.googleapis.com/css2?family=Playball");
 
 /* ICONS */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
@@ -11,9 +12,10 @@
     rgba(8, 0, 16, 1) 0%,
     rgb(12, 0, 23) 100%
   );
-  --h-font: "Coda", system-ui;
   --primary-font: "Poppins", sans-serif;
   --style-font: "Cambo", serif;
+  --playball-font: "Playball", cursive;
+
   --side-pad: 0 80px;
   --padding: 20px 80px;
   --mobi-padding: 20px 15px;
@@ -29,13 +31,25 @@
   --blue-color: #149ed4;
   --dark-blue-color: #000986;
   --green-color: #14d42a;
-  --red-color: #FF0000;
+  --red-color: #ff0000;
   --white-color: #fefefe;
   --glass-color-01: rgba(255, 255, 255, 0.01);
   --glass-color-02: rgba(255, 255, 255, 0.02);
   --glass-color-03: rgba(255, 255, 255, 0.03);
   --glass-color-04: rgba(255, 255, 255, 0.04);
   --glass-color-05: rgba(255, 255, 255, 0.05);
+  --glass-color-06: rgba(255, 255, 255, 0.06);
+  --glass-color-07: rgba(255, 255, 255, 0.07);
+  --glass-color-08: rgba(255, 255, 255, 0.08);
+  --glass-color-09: rgba(255, 255, 255, 0.09);
+  --glass-color-10: rgba(255, 255, 255, 0.1);
+  --glass-color-15: rgba(255, 255, 255, 0.15);
+  --radial-black: radial-gradient(
+    closest-side,
+    rgba(51, 51, 51, 1) 0%,
+    rgba(35, 35, 35, 1) 100%
+  );
+  --black-boarder: 2px solid #464646;
 }
 
 body {
@@ -45,15 +59,14 @@ body {
 
 ::selection {
   background: var(--dark-blue-color);
-  color: white; 
+  color: white;
   text-shadow: 2px 2px 4px black;
 }
-
 
 .custom-cursor {
   width: 15px;
   height: 15px;
-  background-color: #149ED4;
+  background-color: #149ed4;
   filter: blur(2px);
   border-radius: 50%;
   position: fixed;
@@ -66,14 +79,13 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /* Apply scrollbar styles */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background:var(--bg-color);
+  background: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
