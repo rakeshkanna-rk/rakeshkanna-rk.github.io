@@ -112,7 +112,7 @@ export default {
   position: absolute;
   top: 20px;
   right: 15px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .img-holder {

@@ -20,7 +20,9 @@
       <div class="btm2">
         <LogoWing />
       </div>
-      <div class="btm3"></div>
+      <div class="btm3">
+        <MarqueProjects />
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +31,7 @@
 import HoverText from "./sub-components/HoverText.vue";
 import MarqueTechStack from "./sub-components/MarqueTechStack.vue";
 import LogoWing from "./sub-components/LogoWing.vue";
+import MarqueProjects from "./sub-components/MarqueProjects.vue";
 </script>
 
 <style scoped>
@@ -106,8 +109,6 @@ import LogoWing from "./sub-components/LogoWing.vue";
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 1;
-  height: 10px;
   overflow: hidden;
   width: 30%;
 }

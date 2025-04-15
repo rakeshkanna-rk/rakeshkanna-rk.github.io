@@ -13,7 +13,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-const position = ref({ x: 100, y: 500 })
+const position = ref({ x: 50, y: 350 })
 const velocity = ref({ x: 0, y: 0 })
 const isDragging = ref(false)
 const lastMouse = ref({ x: 0, y: 0 })
@@ -108,7 +108,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .draggable-box {
   position: fixed;
-  z-index: 9999;
+  z-index: 2;
   will-change: transform;
   cursor: grab;
   user-select: none;
@@ -122,15 +122,14 @@ img {
   width: 130px;
   height: 130px;
   pointer-events: none;
-  user-drag: none;
   -webkit-user-drag: none;
   animation: spin 20s linear infinite;
 }
 
 @media screen and (max-width: 601px) {
   img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   
 }

@@ -1,6 +1,20 @@
 <template>
-  <div>
-    <!-- <Particles /> -->
+  <div id="home">
+    <!-- Background Image -->
+    <img
+      src="@/assets/bg/stone-bg.svg"
+      class="bg-img"
+      id="desktop-bg"
+      alt="background image"
+    />
+    <img
+      src="@/assets/bg/mobi-stone-bg.svg"
+      class="bg-img"
+      id="mobile-bg"
+      alt="background image"
+    />
+
+    <DraggableBox />
     <div class="hero">
       <HeadLine />
     </div>
@@ -10,15 +24,15 @@
 
 <script>
 import HeadLine from "../components/HeadLine.vue";
-import Particles from "../components/Particles.vue";
 import BentoGrid from "@/components/BentoGrid.vue";
+import DraggableBox from "../components/sub-components/DraggableBox.vue";
 
 export default {
   name: "Home",
   components: {
-    Particles,
     HeadLine,
     BentoGrid,
+    DraggableBox,
   },
 
   data() {
@@ -28,6 +42,44 @@ export default {
 </script>
 
 <style scoped>
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 0 60px 0;
+}
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none; /* Makes sure it doesn’t block clicks */
+}
+
+#desktop-bg {
+  display: block;
+}
+
+#mobile-bg {
+  display: none;
+}
+
+@media screen and (max-width: 601px) {
+  #desktop-bg {
+    display: none;
+  }
+
+  #mobile-bg {
+    display: block;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -42,6 +94,5 @@ export default {
   .hero {
     height: 70vh;
   }
-  
 }
 </style>
