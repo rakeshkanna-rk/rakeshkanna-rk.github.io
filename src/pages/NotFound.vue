@@ -1,4 +1,16 @@
 <template>
+  <img
+    src="@/assets/bg/red-sidelight-bg.svg"
+    class="bg-img"
+    id="desktop-bg"
+    alt="background image"
+  />
+  <img 
+    src="@/assets/bg/mobi-red-sidelight-bg.svg"
+    class="bg-img"
+    id="mobile-bg"
+    alt="background image"
+  />
   <div class="not-found">
     <h1>404</h1>
     <p>Oops! The page you are looking for does not exist.</p>
@@ -43,9 +55,9 @@ onMounted(() => {
 h1 {
   font-size: 170px;
   color: #fff;
-  text-shadow: 0 0 50px #00E5FF, 0 0 20px #00E5FF, 0 0 40px #00E5FF;
+  text-shadow: 0 0 50px #00e5ff, 0 0 20px #00e5ff, 0 0 40px #00e5ff;
   letter-spacing: 0.1em;
-  line-height: .5;
+  line-height: 0.5;
 }
 
 p {

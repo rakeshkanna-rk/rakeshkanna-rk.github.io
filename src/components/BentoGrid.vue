@@ -66,6 +66,7 @@ import MarqueProjects from "./marque/MarqueProjects.vue";
   backdrop-filter: blur(10px);
   border: var(--black-boarder);
   border-radius: 20px;
+  width: calc((100% / 3) - 30px);
 }
 
 .top {
@@ -101,7 +102,7 @@ import MarqueProjects from "./marque/MarqueProjects.vue";
   justify-content: center;
   overflow: hidden;
   flex-grow: 1;
-  width: 30%;
+  /* width: 30%; */
 }
 
 .bottom .btm3 {
@@ -110,7 +111,7 @@ import MarqueProjects from "./marque/MarqueProjects.vue";
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 30%;
+  /* width: 30%; */
 }
 
 .tech-text {

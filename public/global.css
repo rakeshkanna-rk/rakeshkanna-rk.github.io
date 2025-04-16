@@ -50,6 +50,13 @@
     rgba(35, 35, 35, 1) 100%
   );
   --black-boarder: 2px solid #464646;
+  --insta-gradiant: linear-gradient(
+    60deg,
+    rgba(255, 0, 170, 1),
+    rgba(255, 77, 64, 1),
+    rgba(204, 79, 92, 1),
+    rgba(115, 0, 255, 1)
+  );
 }
 
 body {
@@ -58,7 +65,7 @@ body {
 }
 
 ::selection {
-  background: var(--dark-blue-color);
+  background: #149ed4;
   color: white;
   text-shadow: 2px 2px 4px black;
 }
@@ -92,6 +99,24 @@ body {
   object-fit: cover;
   z-index: -1;
   pointer-events: none; /* Makes sure it doesn’t block clicks */
+}
+
+#desktop-bg {
+  display: block;
+}
+
+#mobile-bg {
+  display: none;
+}
+
+@media screen and (max-width: 601px) {
+  #desktop-bg {
+    display: none;
+  }
+
+  #mobile-bg {
+    display: block;
+  }
 }
 
 html {

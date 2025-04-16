@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Education Center",
+    "img": "./assets/projects/educenter.png",
+    "link": "https://www.behance.net/gallery/178610739/Education-Center-A-Learning-app-Case-study",
+    "desc": [
+      "An intuitive online learning platform concept designed for mobile-first experiences.",
+      "Features smooth onboarding, accessible course navigation, and user progress tracking.",
+      "Crafted with engaging visuals and a structured layout for better learning flow."
+    ],
+    "tags": ["Figma", "Notion", "UI/UX", "App Design"],
+    "type": " 🎨 Designing"
+  },
+  {
+    "title": "Instagram for Vision Pro",
+    "img": "./assets/projects/visionpro.png",
+    "link": "https://www.behance.net/gallery/178698351/Apple-Vision-Pro-Instagram-UI",
+    "desc": [
+      "Futuristic UI concept for Instagram tailored for Apple Vision Pro.",
+      "Explores spatial interaction design with immersive post viewing and 3D interface layering.",
+      "Focuses on gesture control and floating UI components for next-gen UX."
+    ],
+    "tags": ["Figma", "UI/UX", "Apple", "App Design", "Instagram"],
+    "type": " 🎨 Designing"
+  },
+  {
+    "title": "Travel Guy",
+    "img": "./assets/projects/travelguy.png",
+    "link": "https://www.behance.net/gallery/188872021/Travel-Guy-Tourism-Website-Landing-Page-Design",
+    "desc": [
+      "Landing page design for a vibrant and modern travel company.",
+      "Highlights featured destinations with vivid visuals and user-focused sections.",
+      "Crafted for desktop and mobile views using a grid-based layout and clean typography."
+    ],
+    "tags": ["Figma", "Notion", "UI/UX", "Web Design"],
+    "type": " 🎨 Designing"
+  },
+  {
+    "title": "Glass Morphism Icons",
+    "img": "./assets/projects/glassmorphismicons.png",
+    "link": "https://www.behance.net/gallery/188872021/Travel-Guy-Tourism-Website-Landing-Page-Design",
+    "desc": [
+      "A stylish set of UI icons designed with glassmorphism aesthetics.",
+      "Ideal for futuristic interfaces and dashboards with translucent effects.",
+      "Designed for consistency, scalability, and clean integration into mobile/web UIs."
+    ],
+    "tags": ["Figma", "UI/UX", "App Design", "Icons"],
+    "type": " 🎨 Designing"
+  }
+]

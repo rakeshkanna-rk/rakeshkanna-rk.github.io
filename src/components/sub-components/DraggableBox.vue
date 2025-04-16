@@ -131,6 +131,9 @@ img {
     width: 80px;
     height: 80px;
   }
+  .draggable-box {
+    display: none;
+  }
   
 }
 

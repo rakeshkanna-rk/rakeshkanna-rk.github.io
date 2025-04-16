@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Education Center",
+    "img": "./assets/projects/educenter.png",
+    "link": "https://www.behance.net/gallery/178610739/Education-Center-A-Learning-app-Case-study",
+    "desc": [
+      "A mobile-first learning app UI focused on simplicity and engagement.",
+      "Designed key flows including onboarding, course browsing, and progress tracking.",
+      "Used a clean color palette and friendly visuals to enhance user experience."
+    ],
+    "tags": ["Figma", "Notion", "UI/UX", "App Design"],
+    "type": " 🎨 Designing"
+  },
+  {
+    "title": "Travel Guy",
+    "img": "./assets/projects/travelguy.png",
+    "link": "https://www.behance.net/gallery/188872021/Travel-Guy-Tourism-Website-Landing-Page-Design",
+    "desc": [
+      "Landing page concept for a modern travel and tourism website.",
+      "Focused on visual storytelling using high-quality imagery and vibrant layout.",
+      "Designed sections for featured destinations, packages, and user testimonials."
+    ],
+    "tags": ["Figma", "Notion", "UI/UX", "Web Design"],
+    "type": " 🎨 Designing"
+  },
+  {
+    "title": "Instagram for Vision Pro",
+    "img": "./assets/projects/visionpro.png",
+    "link": "https://www.behance.net/gallery/178698351/Apple-Vision-Pro-Instagram-UI",
+    "desc": [
+      "Concept UI for Instagram on Apple Vision Pro.",
+      "Adapted the experience to spatial interfaces and 3D interactions.",
+      "Emphasized gesture-based navigation and immersive content viewing."
+    ],
+    "tags": ["Figma", "UI/UX", "Apple", "App Design", "Instagram"],
+    "type": " 🎨 Designing"
+  },
+  {
+    "title": "EzyDB",
+    "img": "./assets/projects/ezydb.png",
+    "link": "https:github.com/EzyCode/EzyDB",
+    "desc": [
+      "A lightweight, file-based NoSQL database system built with Python.",
+      "Designed for developers who need quick and easy data storage without server setup.",
+      "Supports basic CRUD operations and flexible JSON-style schema."
+    ],
+    "tags": ["Python", "DBMS", "NpSQL", "Database Management System"],
+    "type": " 💻 Coding"
+  },
+  {
+    "title": "DarkEST",
+    "img": "./assets/projects/darkest.png",
+    "link": "https:github.com/rakeshkanna-rk/DarkEST",
+    "desc": [
+      "A visually soothing dark theme for Visual Studio Code.",
+      "Crafted to reduce eye strain during long development sessions.",
+      "Balances deep blacks and muted colors for readability and elegance."
+    ],
+    "tags": ["VSCode", "Theme", "Dark Theme", "Visual Studio Code"],
+    "type": " 💻 Coding"
+  },
+  {
+    "title": "Pip Creator",
+    "img": "./assets/projects/pipcreator.png",
+    "link": "https://github.com/rakeshkanna-rk/PipCreator",
+    "desc": [
+      "CLI tool to help developers quickly generate and publish Python packages.",
+      "Automates setup file creation, versioning, and structure generation.",
+      "Great for beginners who want to publish tools to PyPI with ease."
+    ],
+    "tags": ["Python", "Pip", "Pip Package", "Pip Package Creator"],
+    "type": " 💻 Coding"
+  },
+  {
+    "title": "Markdown Editor",
+    "img": "./assets/projects/markdowneditor.png",
+    "link": "https://github.com/rakeshkanna-rk/Markdown-Editor",
+    "web": "https://rakeshkanna-rk.github.io/Markdown-Editor/",
+    "desc": [
+      "A minimal markdown editor that renders live preview as you type.",
+      "Clean UI for distraction-free writing and formatting.",
+      "Built using pure HTML, CSS, and JavaScript."
+    ],
+    "tags": ["HTML", "CSS", "JavaScript", "Web", "Markdown Editor"],
+    "type": " 💻 Coding"
+  }
+]

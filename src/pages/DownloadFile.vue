@@ -12,6 +12,7 @@
       <a :href="fileUrl" download>click here</a>.
     </p>
     <p v-else>Invalid file name.</p>
+    <router-link to="/" class="home-link">Go Back Home</router-link>
   </div>
 </template>
 
@@ -22,19 +23,19 @@ import { onMounted, computed } from "vue";
 const route = useRoute();
 const fileName = route.params.fileName;
 
-// Optional: restrict allowed file types or sanitize if needed
+// ✅ Extract safeName to reuse it in both places
+const safeName = fileName ? fileName.replace(/[^a-zA-Z0-9_.-]/g, "") : null;
+
+// ✅ Now computed uses it
 const fileUrl = computed(() => {
-  if (!fileName) return null;
-  // prevent any kind of path traversal attacks
-  const safeName = fileName.replace(/[^a-zA-Z0-9_.-]/g, "");
-  return `/docs/${safeName}`;
+  return safeName ? `/downloads/${safeName}` : null;
 });
 
 onMounted(() => {
   if (fileUrl.value) {
     const link = document.createElement("a");
     link.href = fileUrl.value;
-    link.setAttribute("download", "");
+    link.setAttribute("download", safeName); // ✅ This now works
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -1,7 +1,5 @@
 <template>
-
   <Cursor />
-  <!-- <Particles /> -->
   <NavBar />
   <MobiSocialLink />
   <router-view></router-view>

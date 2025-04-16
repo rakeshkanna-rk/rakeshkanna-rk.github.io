@@ -58,7 +58,6 @@ const goToProjects = () => {
 
 .marquee-track {
   display: flex;
-  gap: 20px;
   width: max-content;
   animation: scroll 40s linear infinite;
 }
@@ -78,7 +77,6 @@ const goToProjects = () => {
   object-fit: cover;
   filter: blur(4px);
   transition: filter 0.3s ease;
-  border-radius: 8px;
 }
 
 .marquee-img.clear {
@@ -99,7 +97,7 @@ const goToProjects = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 95%;
+  width: 100%;
   position: absolute;
   bottom: -100%;
   color: var(--white-color);
@@ -123,7 +121,13 @@ const goToProjects = () => {
     backdrop-filter: blur(6.5px);
     border-radius: 100px;
     position: absolute;
-    right: 30px;
+    right: 50px;
 }
 
+@media screen and (max-width: 601px) {
+  .marquee-img {
+    filter: blur(0px);
+  }
+  
+}
 </style>

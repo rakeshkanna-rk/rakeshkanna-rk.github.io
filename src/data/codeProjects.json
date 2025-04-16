@@ -1,0 +1,77 @@
+[
+    {
+      "title": "EzyDB",
+      "img": "./assets/projects/ezydb.png",
+      "link": "https://github.com/EzyCode/EzyDB",
+      "desc": [
+        "A lightweight, file-based NoSQL database built for Python developers.",
+        "Offers fast read/write performance with zero external dependencies.",
+        "Ideal for small-scale projects, prototyping, or learning database concepts."
+      ],
+      "tags": ["Python", "DBMS", "NpSQL", "Database Management System"],
+      "type": " 💻 Coding"
+    },
+    {
+      "title": "DarkEST",
+      "img": "./assets/projects/darkest.png",
+      "link": "https://github.com/rakeshkanna-rk/DarkEST",
+      "desc": [
+        "A super dark Visual Studio Code theme designed for night-time development.",
+        "Minimizes eye strain with deep contrast and elegant syntax highlighting.",
+        "Includes custom styling for all major file types and UI components."
+      ],
+      "tags": ["VSCode", "Theme", "Dark Theme", "Visual Studio Code"],
+      "type": " 💻 Coding"
+    },
+    {
+      "title": "Pip Creator",
+      "img": "./assets/projects/pipcreator.png",
+      "link": "https://github.com/rakeshkanna-rk/PipCreator",
+      "desc": [
+        "A CLI tool that simplifies the creation of Python pip packages.",
+        "Automatically sets up directory structure, `setup.py`, and metadata files.",
+        "Ideal for beginners who want to publish their first Python library."
+      ],
+      "tags": ["Python", "Pip", "Pip Package", "Pip Package Creator"],
+      "type": " 💻 Coding"
+    },
+    {
+      "title": "Code Editor",
+      "img": "./assets/projects/codeeditor.png",
+      "link": "https://github.com/rakeshkanna-rk/CodeEditor",
+      "web": "https://rakeshkanna-rk.github.io/CodeEditor/",
+      "desc": [
+        "A simple, lightweight in-browser code editor built with vanilla JS.",
+        "Supports HTML, CSS, and JS preview with real-time updates.",
+        "Perfect for quick prototyping or educational use."
+      ],
+      "tags": ["HTML", "CSS", "JavaScript", "Web", "Code Editor"],
+      "type": " 💻 Coding"
+    },
+    {
+      "title": "Markdown Editor",
+      "img": "./assets/projects/markdowneditor.png",
+      "link": "https://github.com/rakeshkanna-rk/MarkdownEditor",
+      "web": "https://rakeshkanna-rk.github.io/MarkdownEditor/",
+      "desc": [
+        "A minimal markdown editor that renders live preview as you type.",
+        "Clean UI for distraction-free writing and formatting.",
+        "Built using pure HTML, CSS, and JavaScript."
+      ],
+      "tags": ["HTML", "CSS", "JavaScript", "Web", "Markdown Editor"],
+      "type": " 💻 Coding"
+    },
+    {
+      "title": "MonoCipher",
+      "img": "./assets/projects/monocipher.png",
+      "link": "https://github.com/rakeshkanna-rk/MonoCipher",
+      "desc": [
+        "Implements a simple monoalphabetic substitution cipher in Python.",
+        "Provides functionality for both encryption and decryption.",
+        "Great for learning classical encryption techniques."
+      ],
+      "tags": ["Python", "Encryption", "Decryption", "Monoalphabetic Cipher"],
+      "type": " 💻 Coding"
+    }
+  ]
+  

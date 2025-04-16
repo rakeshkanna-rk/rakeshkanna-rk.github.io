@@ -1,16 +1,19 @@
 <template>
-  <div class="marquee-wrapper">
-    <div class="marquee-track">
-      <div class="marquee-text">
-        <span v-for="(word, index) in words" :key="index"
-          >{{ word }} &nbsp;✦ &nbsp;</span
-        >
-        <!-- Repeat to create continuous effect -->
-        <span v-for="(word, index) in words" :key="'repeat-' + index">
-          {{ word }} ✦
-        </span>
+  <div class="marquee-wrapper-overskew">
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <div class="marquee-text">
+          <span v-for="(word, index) in words" :key="index"
+            >{{ word }} &nbsp;✦ &nbsp;</span
+          >
+          <!-- Repeat to create continuous effect -->
+          <span v-for="(word, index) in words" :key="'repeat-' + index">
+            {{ word }} &nbsp;✦ &nbsp;
+          </span>
+        </div>
       </div>
     </div>
+    <div class="marquee-wrapper"></div>
   </div>
 </template>
 
@@ -29,11 +32,22 @@ const words = [
 </script>
 
 <style scoped>
+
 .marquee-wrapper {
   overflow: hidden;
   position: relative;
   height: 60px;
   transform: skewY(-3deg);
+  background: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+  margin: 120px 0;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+}
+
+.marquee-wrapper-overskew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
   background: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
   margin: 120px 0;
 }

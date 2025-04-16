@@ -15,13 +15,24 @@
     />
 
     <DraggableBox />
-    
+
     <div class="hero">
       <HeadLine />
     </div>
+
     <BentoGrid />
 
     <MarqueText />
+
+    <SectionHeader
+      :subheading="'PROJECT SHOWCASE'"
+      :mainHeading="'Curated'"
+      :shimmerText="'Creations'"
+    />
+
+    <Showcase/>
+
+    <ShowcaseMobi/>
   </div>
 </template>
 
@@ -30,27 +41,12 @@ import HeadLine from "@/components/HeadLine.vue";
 import BentoGrid from "@/components/BentoGrid.vue";
 import DraggableBox from "@/components/sub-components/DraggableBox.vue";
 import MarqueText from "@/components/marque/MarqueText.vue";
+import SectionHeader from "@/components/SectionHeader.vue";
+import Showcase from "@/components/Showcase.vue";
+import ShowcaseMobi from "@/components/ShowcaseMobi.vue";
 </script>
 
 <style scoped>
-#desktop-bg {
-  display: block;
-}
-
-#mobile-bg {
-  display: none;
-}
-
-@media screen and (max-width: 601px) {
-  #desktop-bg {
-    display: none;
-  }
-
-  #mobile-bg {
-    display: block;
-  }
-}
-
 .hero {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,5 @@
 <template>
-  <div class="page-wrapper">
+  <div class="page-wrapper space">
     <!-- Background Image -->
     <img src="@/assets/bg/light-bg.svg" class="bg-img" alt="background image" />
 
@@ -80,6 +80,10 @@ export default {
 </script>
 
 <style scoped>
+.space{
+  padding-bottom: 150px;
+}
+
 .header {
   display: flex;
   justify-content: center;
