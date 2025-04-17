@@ -1,10 +1,12 @@
 <template>
   <!-- Background Image -->
   <img
-    src="@/assets/bg/bluelight-bg.svg"
+    src="@/assets/bg/bluelight-bg.avif"
     class="bg-img"
     alt="background image"
+    fetchpriority="high"
   />
+
   <div class="download-wrapper">
     <h2>Preparing your download...</h2>
     <p v-if="fileUrl">

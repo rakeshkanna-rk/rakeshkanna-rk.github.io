@@ -4,6 +4,7 @@
       class="close-icon"
       src="../../assets/close.svg"
       @click="closeMenu"
+      alt="close"
       v-motion
       :initial="{ rotate: 180 }"
       :visible="{ rotate: 0 }"

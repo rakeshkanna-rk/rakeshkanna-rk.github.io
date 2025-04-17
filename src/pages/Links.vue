@@ -1,12 +1,17 @@
 <template>
   <div class="page-wrapper space">
     <!-- Background Image -->
-    <img src="@/assets/bg/light-bg.svg" class="bg-img" alt="background image" />
+    <img
+      src="@/assets/bg/light-bg.avif"
+      class="bg-img"
+      alt="background image"
+      fetchpriority="high"
+    />
 
     <!-- Foreground Content -->
     <div class="header">
       <img
-        src="@/assets/logos/profile-pic.svg"
+        src="@/assets/logos/profile-pic.webp"
         alt="Logo"
         v-motion
         :initial="{ opacity: 0, scale: 0.7 }"
@@ -80,7 +85,7 @@ export default {
 </script>
 
 <style scoped>
-.space{
+.space {
   padding-bottom: 150px;
 }
 

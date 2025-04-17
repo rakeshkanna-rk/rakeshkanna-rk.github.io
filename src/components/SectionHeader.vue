@@ -65,4 +65,14 @@ const props = defineProps({
     background-position: 0;
   }
 }
+
+@media screen and (max-width: 601px) {
+  .main-heading {
+    font-size: 2.4rem;
+  }
+  .subheading {
+    font-size: 0.75rem;
+    margin-bottom: -0.5rem;
+  }
+}
 </style>

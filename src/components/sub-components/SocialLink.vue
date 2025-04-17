@@ -7,7 +7,7 @@
     rel="noopener noreferrer"
   >
     <div class="social">
-      <img class="image" :src="img" />
+      <img class="image" :src="img" :alt="title" />
     </div>
   </a>
 </template>

@@ -17,6 +17,7 @@
     @click="isMenuOpen = !isMenuOpen"
     v-motion
     title="menu"
+    alt="menu"
     :initial="{ opacity: 0, y: -50 }"
     :visible="{ opacity: 1, y: 0 }"
     :duration="500"

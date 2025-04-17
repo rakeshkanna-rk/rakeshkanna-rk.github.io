@@ -38,7 +38,7 @@
           {{ line }}
         </div>
 
-        <div class="tags">
+        <ul class="tags">
           <li
             v-for="(tag, i) in activeProject.tags"
             :key="i"
@@ -50,7 +50,7 @@
           >
             {{ tag }}
           </li>
-        </div>
+        </ul>
         
         <div class="visit">
 
@@ -214,12 +214,12 @@ function openLink(link) {
 
 .sticky-right {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 50%;
   height: 100vh;
   overflow: hidden;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 4rem;
   box-sizing: border-box;
   position: relative;
 }

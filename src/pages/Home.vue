@@ -2,16 +2,18 @@
   <div id="home page-wrapper">
     <!-- Background Image -->
     <img
-      src="@/assets/bg/stone-bg.svg"
+      src="@/assets/bg/stone-bg.avif"
       class="bg-img"
       id="desktop-bg"
       alt="background image"
+      fetchpriority="high"
     />
     <img
-      src="@/assets/bg/mobi-stone-bg.svg"
+      src="@/assets/bg/mobi-stone-bg.avif"
       class="bg-img"
       id="mobile-bg"
       alt="background image"
+      fetchpriority="high"
     />
 
     <DraggableBox />
@@ -30,9 +32,9 @@
       :shimmerText="'Creations'"
     />
 
-    <Showcase/>
+    <Showcase />
 
-    <ShowcaseMobi/>
+    <ShowcaseMobi />
   </div>
 </template>
 

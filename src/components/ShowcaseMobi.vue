@@ -26,6 +26,7 @@ import ProjectCard from "./sub-components/ProjectCard.vue";
   flex-direction: row;
   gap: 1rem;
   padding: 0 1rem;
+  margin-bottom: 7rem;
 }
 
 @media screen and (max-width: 900px) {

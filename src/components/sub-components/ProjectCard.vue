@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="img-container">
-      <img :src="activeProject.img" alt="data.img" />
+      <img :src="activeProject.img" :alt="activeProject.title" />
     </div>
     <p class="project-type">{{ activeProject.type }}</p>
     <h2><span class="line"></span> {{ activeProject.title }}</h2>
@@ -10,9 +10,9 @@
       {{ line }}
     </div>
 
-    <div class="tags">
+    <ul class="tags">
       <li v-for="(tag, i) in activeProject.tags" :key="i">{{ tag }}</li>
-    </div>
+    </ul>
 
     <div class="visit">
       <RotatingLink
@@ -47,8 +47,6 @@ const activeProject = props.data;
 <style scoped>
 .card {
   max-width: 500px;
-  width: 100%;
-  margin: auto;
   padding: 2rem;
   border-radius: 1.25rem;
   background: var(--glass-color-02, rgba(255, 255, 255, 0.05));
@@ -70,6 +68,7 @@ const activeProject = props.data;
 
 .card .project-type {
   display: inline-block;
+  align-items: start;
   padding: 0.4rem 0.75rem;
   border-radius: 0.5rem;
   background: var(--glass-color-03);
@@ -88,10 +87,9 @@ const activeProject = props.data;
 }
 
 .card .desc-list {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.9;
-  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-bottom: 0.7rem;
 }
 
 .card .tags {
@@ -99,6 +97,8 @@ const activeProject = props.data;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .card .tags li {
@@ -108,17 +108,18 @@ const activeProject = props.data;
   background: var(--glass-color-03);
   border: 0.1px solid #ffffff3e;
   white-space: nowrap;
+  list-style-type: none; 
 }
 
 .card .visit {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 @media screen and (max-width: 768px) {
   .card {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .card h2 {
@@ -132,5 +133,14 @@ const activeProject = props.data;
   .card .tags li {
     font-size: 0.8rem;
   }
+}
+
+.line {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 5px;
+  border-radius: 5px;
+  background: #9400ae;
 }
 </style>
