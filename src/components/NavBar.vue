@@ -7,31 +7,35 @@
       title="logo"
       alt="logo"
       v-motion
+      v-once
       :initial="{ opacity: 0, y: -50 }"
-      :visible="{ opacity: 1, y: 0 }"
+      :visible-once="{ opacity: 1, y: 0 }"
       :duration="500"
     />
     <img
-    class="handburger-menu"
-    src="../assets/handburger-menu.svg"
-    @click="isMenuOpen = !isMenuOpen"
-    v-motion
-    title="menu"
-    alt="menu"
-    :initial="{ opacity: 0, y: -50 }"
-    :visible="{ opacity: 1, y: 0 }"
-    :duration="500"
+      class="handburger-menu"
+      src="../assets/handburger-menu.svg"
+      @click="isMenuOpen = !isMenuOpen"
+      v-motion
+      v-once
+      title="menu"
+      alt="menu"
+      :initial="{ opacity: 0, y: -50 }"
+      :visible-once="{ opacity: 1, y: 0 }"
+      :duration="500"
     />
-    
+
     <LargeMenu :pages="pages" />
     <div
       class="social-link-container"
       v-motion
+      v-once
       :initial="{ opacity: 0, y: -50 }"
-      :visible="{ opacity: 1, y: 0 }"
+      :visible-once="{ opacity: 1, y: 0 }"
       :duration="500"
     >
       <SocialLink
+        v-once
         v-for="(social, index) in socialLinks"
         :key="index"
         :link="social.link"
@@ -108,7 +112,6 @@ export default {
   }
   .navbar {
     padding: var(--mobi-padding);
-
   }
   .logo {
     height: 45px;

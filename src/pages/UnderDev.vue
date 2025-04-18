@@ -7,10 +7,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "UnderDev",
-};
+<script setup>
+import { useHead } from "@vueuse/head"
+
+useHead({
+  title: "Under Development 🛠️",
+})
 </script>
 
 <style scoped>

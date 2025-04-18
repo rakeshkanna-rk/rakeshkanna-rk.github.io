@@ -23,7 +23,12 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
-import timeline from "@/data/timeline.json";
+import { watch } from "vue";
+// import timeline from "../data/timeline.json";
+import { useFetchData } from "@/func/useFetchData";
+
+const url = "https://rakeshkanna-rk.github.io/database/portfolio/timeline.json";
+const { data: timeline, isLoading, error } = useFetchData(url, "timeline");
 
 const container = ref(null);
 const lineHeight = ref(0);
@@ -59,11 +64,16 @@ const updateProgress = () => {
 
 onMounted(() => {
   window.addEventListener("scroll", updateProgress);
-  nextTick(() => {
-    markers.value = Array.from(container.value.querySelectorAll(".marker"));
-    updateProgress();
-  });
 });
+
+watch(timeline, async (val) => {
+  if (!val || !val.length) return;
+
+  await nextTick();
+  markers.value = Array.from(container.value.querySelectorAll(".marker"));
+  updateProgress();
+});
+
 onUnmounted(() => {
   window.removeEventListener("scroll", updateProgress);
 });
@@ -104,7 +114,6 @@ onUnmounted(() => {
   box-shadow: 0 0 8px #0ff;
 }
 
-
 @keyframes growLine {
   0% {
     height: 0;
@@ -142,7 +151,9 @@ onUnmounted(() => {
   border-radius: 50%;
 } */
 .content {
-  background: #111;
+  background: var(--glass-color-05);
+  backdrop-filter: blur(6.5px);
+  border: 0.1px solid #ffffff3e;
   padding: 20px;
   border-radius: 10px;
   color: #fff;
@@ -153,12 +164,12 @@ h2 {
 }
 
 .period {
-  color: #999;
-  font-weight: bold;
+  font: 1em var(--style-font);
+  color: #a5a5a5;
 }
 .company,
 .location {
-  font-size: 0.9em;
+  font: 1em var(--style-font);
   color: #ccc;
 }
 ul {

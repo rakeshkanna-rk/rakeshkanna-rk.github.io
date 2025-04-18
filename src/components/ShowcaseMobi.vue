@@ -9,14 +9,19 @@
       :visible="{ opacity: 1, y: 0 }"
       :duration="600"
     >
-      <ProjectCard :data="project"/>
+      <ProjectCard :data="project" />
     </div>
   </div>
 </template>
 
 <script setup>
-import projects from "@/data/homeProjects.json";
+import { ref, onMounted } from "vue";
 import ProjectCard from "./sub-components/ProjectCard.vue";
+import {useFetchData} from "@/func/useFetchData";
+
+const url =
+  "https://rakeshkanna-rk.github.io/database/portfolio/homeProjects.json";
+const { data: projects, isLoading, error } = useFetchData(url, "homeProjects");
 </script>
 
 <style scoped>
@@ -33,6 +38,5 @@ import ProjectCard from "./sub-components/ProjectCard.vue";
   .showcase-mobi {
     display: flex;
   }
-    
 }
 </style>

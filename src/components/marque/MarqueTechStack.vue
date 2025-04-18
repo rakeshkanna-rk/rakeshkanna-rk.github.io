@@ -19,7 +19,11 @@
 </template>
 
 <script setup>
-import TechStack from "../../data/TechStack.json";
+import { onMounted, ref } from "vue";
+import { useFetchData } from "@/func/useFetchData";
+
+const url = "https://rakeshkanna-rk.github.io/database/portfolio/TechStack.json";
+const { data: TechStack, isLoading, error } = useFetchData(url, "TechStack");
 
 const techStack = TechStack;
 </script>

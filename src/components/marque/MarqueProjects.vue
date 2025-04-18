@@ -32,21 +32,28 @@
 <script setup>
 import { ref, computed } from "vue";
 import { useRouter } from 'vue-router'
-import projimgs from "@/data/projimgs.json";
+import { useFetchData } from "@/func/useFetchData";
 
-// Duplicate the image array for seamless scrolling
-const images = projimgs;
-const doubleImages = computed(() => [...images, ...images]);
+const url = "https://rakeshkanna-rk.github.io/database/portfolio/projimgs.json";
+const { data: projimgs, isLoading, error } = useFetchData(url, "projimgs");
 
 const paused = ref(false);
 const hovered = ref(null);
-
-const router = useRouter()
+const router = useRouter();
 
 const goToProjects = () => {
-  router.push({ path: '/projects' }) // This works with hash history too
-}
+  router.push({ path: '/projects' });
+};
+
+// ✅ Safely unwrap the images only if they're loaded
+const doubleImages = computed(() => {
+  if (Array.isArray(projimgs.value)) {
+    return [...projimgs.value, ...projimgs.value];
+  }
+  return []; // fallback until data is ready
+});
 </script>
+
 
 <style scoped>
 .marquee-container {

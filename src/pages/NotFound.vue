@@ -25,6 +25,11 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
+import { useHead } from "@vueuse/head"
+
+useHead({
+  title: "Page Not Found",
+})
 
 const countdown = ref(5);
 const router = useRouter();

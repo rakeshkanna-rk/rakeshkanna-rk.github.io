@@ -21,12 +21,20 @@
 <script setup>
 import { useRoute } from "vue-router";
 import { onMounted, computed } from "vue";
+import { useHead } from "@vueuse/head"
 
 const route = useRoute();
 const fileName = route.params.fileName;
 
 // ✅ Extract safeName to reuse it in both places
 const safeName = fileName ? fileName.replace(/[^a-zA-Z0-9_.-]/g, "") : null;
+
+const title = safeName ? `Download | ${safeName}` : "Download File";
+
+useHead({
+  title: title,
+})
+
 
 // ✅ Now computed uses it
 const fileUrl = computed(() => {

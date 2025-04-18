@@ -63,31 +63,23 @@
   </div>
 </template>
 
-<script>
-import headLine from "../data/headLines.json";
+<script setup>
+import { ref, onMounted } from "vue";
 import Shimmer from "./sub-components/Shimmer.vue";
 import GlassButton from "./buttons/GlassButton.vue";
 import ContactForm from "./ContactForm.vue";
 import ProjHeadBtn from "./sub-components/ProjHeadBtn.vue";
 import EmailCopy from "./buttons/EmailCopy.vue";
+import { useFetchData } from "@/func/useFetchData";
 
-export default {
-  name: "HeadLine",
-  components: {
-    Shimmer,
-    GlassButton,
-    ContactForm,
-    ProjHeadBtn,
-    EmailCopy,
-  },
-  data() {
-    return {
-      headLine,
-      showForm: false,
-    };
-  },
-};
+const showForm = ref(false);
+
+const url =
+  "https://rakeshkanna-rk.github.io/database/portfolio/headLines.json";
+const { data: headLine, isLoading, error } = useFetchData(url, "headLine");
+
 </script>
+
 
 <style scoped>
 .header {

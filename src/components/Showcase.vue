@@ -51,22 +51,20 @@
             {{ tag }}
           </li>
         </ul>
-        
-        <div class="visit">
 
-            
-            <RotatingLink
+        <div class="visit">
+          <RotatingLink
             :link="activeProject.link"
             :ifblock="true"
             :text="'🔗 Visit Project'"
-            />
-            
-            <RotatingLink
+          />
+
+          <RotatingLink
             v-if="activeProject.web"
             :link="activeProject.web"
             :ifblock="activeProject.web"
             :text="'🌐 Live Website'"
-            />
+          />
         </div>
       </div>
     </div>
@@ -74,21 +72,74 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from "vue";
-import projects from "@/data/homeProjects.json";
+import { ref, onMounted, computed, nextTick, watch } from "vue";
 import RotatingLink from "./buttons/RotaingLink.vue";
+import { useFetchData } from "@/func/useFetchData";
+
+const url = "https://rakeshkanna-rk.github.io/database/portfolio/homeProjects.json";
+const { data: projects, isLoading, error } = useFetchData(url, "homeProjects");
 
 const activeIndex = ref(0);
 const projectRefs = {};
 const scrollableRef = ref(null);
 const rightPanelRef = ref(null);
 const containerRef = ref(null);
-const isShowcaseVisible = ref(false); // NEW
+const isShowcaseVisible = ref(false);
 
-const activeProject = computed(() => projects[activeIndex.value]);
+// ✅ FIXED: projects is a ref, so access its value
+const activeProject = computed(() => {
+  return projects.value?.[activeIndex.value];
+});
 
 onMounted(() => {
-  // Observe visibility of each project box
+  // Wait for DOM updates
+  nextTick(() => {
+    if (projects.value?.length) {
+      setupObservers();
+    }
+
+    if (rightPanelRef.value && scrollableRef.value) {
+      rightPanelRef.value.addEventListener(
+        "wheel",
+        (e) => {
+          if (!isShowcaseVisible.value) return;
+
+          const scrollEl = scrollableRef.value;
+          const atTop = scrollEl.scrollTop === 0;
+          const atBottom =
+            scrollEl.scrollTop + scrollEl.clientHeight >= scrollEl.scrollHeight;
+
+          const scrollingDown = e.deltaY > 0;
+          const scrollingUp = e.deltaY < 0;
+
+          const canScrollDown = !atBottom && scrollingDown;
+          const canScrollUp = !atTop && scrollingUp;
+
+          if (canScrollDown || canScrollUp) {
+            e.preventDefault();
+            scrollEl.scrollTop += e.deltaY;
+          }
+        },
+        { passive: false }
+      );
+    }
+  });
+});
+
+// 📦 Run again when data is loaded
+watch(
+  () => projects.value,
+  (val) => {
+    if (val?.length) {
+      nextTick(() => {
+        setupObservers();
+      });
+    }
+  }
+);
+
+// 🧠 Observer function
+function setupObservers() {
   const projectObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -105,7 +156,6 @@ onMounted(() => {
     if (el) projectObserver.observe(el);
   });
 
-  // Observe visibility of the entire showcase container
   const containerObserver = new IntersectionObserver(
     ([entry]) => {
       isShowcaseVisible.value = entry.intersectionRatio > 0.9;
@@ -116,36 +166,7 @@ onMounted(() => {
   if (containerRef.value) {
     containerObserver.observe(containerRef.value);
   }
-
-  // Scroll right wheel scroll into left ONLY when visible
-  rightPanelRef.value.addEventListener(
-    "wheel",
-    (e) => {
-      if (!isShowcaseVisible.value) return; // only scroll inside if visible
-
-      const scrollEl = scrollableRef.value;
-      const atTop = scrollEl.scrollTop === 0;
-      const atBottom =
-        scrollEl.scrollTop + scrollEl.clientHeight >= scrollEl.scrollHeight;
-
-      // If we're NOT at an edge OR trying to scroll in a direction that's possible, prevent default
-      const scrollingDown = e.deltaY > 0;
-      const scrollingUp = e.deltaY < 0;
-
-      const canScrollDown = !atBottom && scrollingDown;
-      const canScrollUp = !atTop && scrollingUp;
-
-      if (canScrollDown || canScrollUp) {
-          e.preventDefault();
-        scrollEl.scrollTop += e.deltaY;
-      }
-      // Otherwise, let the scroll bubble (page scroll)
-    },
-    {
-      passive: false,
-    }
-  );
-});
+}
 
 function openLink(link) {
   window.open(link, "_blank");
@@ -360,7 +381,7 @@ function openLink(link) {
   background: #9400ae;
 }
 
-.visit{
+.visit {
   display: flex;
   gap: 1rem;
 }

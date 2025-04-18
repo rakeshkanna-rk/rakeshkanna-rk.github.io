@@ -2,7 +2,7 @@
   <div class="menu" :class="{ active: isOpen }">
     <img
       class="close-icon"
-      src="../../assets/close.svg"
+      src="@/assets/close.svg"
       @click="closeMenu"
       alt="close"
       v-motion
@@ -30,7 +30,7 @@
             @click="closeMenu"
           >
             <div class="img-holder">
-              <img class="icon" :src="`./icons/${page.icon}.svg`" />
+              <img class="icon" :src="`./icons/${page.icon}.svg`" :alt="page.title" />
             </div>
             <div class="wrapper">
               <a class="item" :href="page.link">{{ page.title }}</a>
