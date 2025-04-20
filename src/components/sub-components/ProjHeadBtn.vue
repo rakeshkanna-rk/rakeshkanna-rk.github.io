@@ -51,10 +51,6 @@ export default {
   transition: rotate 0.3s ease-in;
 }
 
-.new-text p:hover {
-    rotate: -10deg;
-}
-
 .proj-text {
   font-weight: 600;
   color: var(--white-color);

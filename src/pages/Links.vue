@@ -1,13 +1,14 @@
 <template>
-  <div class="page-wrapper space">
+  <div class="page-wrapper">
     <!-- Background Image -->
     <img
-      src="@/assets/bg/light-bg.avif"
-      class="bg-img"
-      alt="background image"
-      fetchpriority="high"
+    src="@/assets/bg/light-bg.avif"
+    class="bg-img"
+    alt="background image"
+    fetchpriority="high"
     />
-
+  </div>
+    
     <!-- Foreground Content -->
     <div class="header">
       <img
@@ -15,13 +16,13 @@
         alt="Logo"
         v-motion
         :initial="{ opacity: 0, scale: 0.7 }"
-        :visible="{ opacity: 1, scale: 1 }"
+        :visible-once="{ opacity: 1, scale: 1 }"
         :duration="500"
       />
       <h1
         v-motion
         :initial="{ opacity: 0, y: 100 }"
-        :visible="{ opacity: 1, y: 0 }"
+        :visible-once="{ opacity: 1, y: 0 }"
         :duration="500"
       >
         Designer | Developer
@@ -32,10 +33,10 @@
           href="/"
           v-motion
           :initial="{ opacity: 0, y: 50 }"
-          :visible="{ opacity: 1, y: 0 }"
+          :visible-once="{ opacity: 1, y: 0 }"
           :duration="300"
         >
-          <img src="icons/globe.svg" />Website (Under Development)</a
+          <img src="icons/globe.svg" alt="globe"/>Website (Under Development)</a
         >
         <a
           class="cta-link"
@@ -43,16 +44,17 @@
           target="_blank"
           v-motion
           :initial="{ opacity: 0, y: 50 }"
-          :visible="{ opacity: 1, y: 0 }"
+          :visible-once="{ opacity: 1, y: 0 }"
           :duration="300"
         >
-          <img src="icons/mail.svg" />
+          <img src="icons/mail.svg" alt="mail"/>
           rakeshkanna0108@gmail.com
         </a>
       </div>
     </div>
-    <div class="links" v-for="(link, index) in links" :key="index">
-      <component
+    <div class="links-wrapper">
+      <div class="links" v-for="(link, index) in links" :key="index">
+        <component
         :is="link.external === false ? 'router-link' : 'a'"
         :to="link.external === false ? link.link : null"
         :href="link.external !== false ? link.link : null"
@@ -63,7 +65,7 @@
         :duration="500"
         :delay="index * 200"
         class="link-item"
-      >
+        >
         <img :src="link.img" alt="Links" />
         {{ link.title }}
       </component>
@@ -160,13 +162,23 @@ useHead({
   margin-right: 10px;
 }
 
+.links-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 150px 0;
+  gap: 20px;
+}
+.link-wrapper:last-child {
+  padding-bottom: 150px;
+}
+
 .links {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   z-index: 1;
   position: relative;
   font-family: var(--primary-font);
@@ -195,5 +207,9 @@ useHead({
 .links img {
   position: absolute;
   left: 20px;
+  width: 30px;
+  height: 30px;
 }
+
+
 </style>

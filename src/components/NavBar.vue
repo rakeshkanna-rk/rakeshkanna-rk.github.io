@@ -52,8 +52,8 @@ const isMenuOpen = ref(false);
 </script>
 
 <script>
-import socialLinks from "../data/socialLinks.json";
-import pages from "../data/pages.json";
+import socialLinks from "@/data/socialLinks.json";
+import pages from "@/data/pages.json";
 import SocialLink from "./sub-components/SocialLink.vue";
 import MobiMenu from "./sub-components/MobiMenu.vue";
 import LargeMenu from "./sub-components/LargeMenu.vue";

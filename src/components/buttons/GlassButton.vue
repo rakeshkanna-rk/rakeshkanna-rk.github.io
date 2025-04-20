@@ -4,7 +4,7 @@
       <p
         v-motion
         :initial="{ opacity: 0, x: 10 }"
-        :visible="{ opacity: 1, x: 0 }"
+        :visible-once="{ opacity: 1, x: 0 }"
         :duration="500"
         :delay="1000"
       >
@@ -15,7 +15,7 @@
         alt="arrow"
         v-motion
         :initial="{ rotate: -90}"
-        :visible="{ rotate: 0}"
+        :visible-once="{ rotate: 0}"
         :duration="500"
         :delay="1000"
       />

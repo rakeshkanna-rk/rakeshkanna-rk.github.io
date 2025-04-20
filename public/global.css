@@ -3,9 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cambo");
 @import url("https://fonts.googleapis.com/css2?family=Playball");
 
-/* ICONS */
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 :root {
   --bg-color: linear-gradient(
     191.62deg,
@@ -83,7 +80,7 @@ body {
 }
 
 .page-wrapper {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100vh;
   overflow: hidden;

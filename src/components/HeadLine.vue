@@ -3,14 +3,14 @@
     <ProjHeadBtn
       v-motion
       :initial="{ opacity: 0, y: 50 }"
-      :visible="{ opacity: 1, y: 0 }"
+      :visible-once="{ opacity: 1, y: 0 }"
       :duration="250"
     />
     <h1
       class="title"
       v-motion
       :initial="{ opacity: 0, y: 100 }"
-      :visible="{ opacity: 1, y: 0 }"
+      :visible-once="{ opacity: 1, y: 0 }"
       :duration="500"
     >
       {{ headLine.title }}
@@ -19,7 +19,7 @@
       :text="headLine.single"
       v-motion
       :initial="{ opacity: 0, y: 100 }"
-      :visible="{ opacity: 1, y: 0 }"
+      :visible-once="{ opacity: 1, y: 0 }"
       :duration="500"
       :delay="200"
     />
@@ -27,7 +27,7 @@
       class="content"
       v-motion
       :initial="{ opacity: 0, y: 100 }"
-      :visible="{ opacity: 1, y: 0 }"
+      :visible-once="{ opacity: 1, y: 0 }"
       :duration="500"
       :delay="400"
     >
@@ -39,14 +39,14 @@
         @openForm="showForm = true"
         v-motion
         :initial="{ opacity: 0, y: 50 }"
-        :visible="{ opacity: 1, y: 0 }"
+        :visible-once="{ opacity: 1, y: 0 }"
         :duration="500"
         :delay="600"
       />
       <EmailCopy
         v-motion
         :initial="{ opacity: 0, y: 50 }"
-        :visible="{ opacity: 1, y: 0 }"
+        :visible-once="{ opacity: 1, y: 0 }"
         :duration="500"
         :delay="800"
       />
@@ -55,7 +55,7 @@
     <ContactForm
       v-motion
       :initial="{ opacity: 0, y: 50 }"
-      :visible="{ opacity: 1, y: 0 }"
+      :visible-once="{ opacity: 1, y: 0 }"
       :duration="500"
       :isOpen="showForm"
       @close="showForm = false"
