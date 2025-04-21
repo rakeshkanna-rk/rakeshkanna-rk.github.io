@@ -6,6 +6,7 @@
     class="bg-img"
     alt="background image"
     fetchpriority="high"
+    loading="lazy"
     />
   </div>
     
@@ -83,21 +84,6 @@ const { data: links, isLoading, error } = useFetchData(url, "links");
 
 useHead({
   title: "Rakesh Kanna | Links",
-  meta: [
-    { name: "description", content: "Explore Rakesh Kanna's creative work — a portfolio featuring innovative web design, UI/UX, and full-stack development projects." },
-    { name: "keywords", content: "Rakesh Kanna, Portfolio, Web Developer, Designer, UI UX, Vue Developer" },
-    { name: "author", content: "Rakesh Kanna" },
-    { property: "og:title", content: "Rakesh Kanna | Portfolio" },
-    { property: "og:description", content: "Take a look at Rakesh Kanna's curated web creations, design experiments, and dev builds." },
-    { property: "og:image", content: "https://rakeshkanna-rk.github.io/assets/preview.jpg" }, // <-- Update with your preview image URL
-    { property: "og:url", content: "https://rakeshkanna-rk.github.io" },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "https://rakeshkanna-rk.github.io/assets/preview.jpg" },
-    { name: "robots", content: "index, follow" }
-  ],
-  link: [
-    { rel: "canonical", href: "https://rakeshkanna-rk.github.io" }
-  ]
 })
 
 </script>

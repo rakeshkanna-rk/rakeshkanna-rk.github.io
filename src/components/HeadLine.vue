@@ -11,27 +11,27 @@
       v-motion
       :initial="{ opacity: 0, y: 100 }"
       :visible-once="{ opacity: 1, y: 0 }"
-      :duration="500"
+      :duration="300"
     >
-      {{ headLine.title }}
+      Designing & Developing with Creativity & Code
     </h1>
     <Shimmer
-      :text="headLine.single"
+      :text="'Creative Technologist'"
       v-motion
       :initial="{ opacity: 0, y: 100 }"
       :visible-once="{ opacity: 1, y: 0 }"
-      :duration="500"
-      :delay="200"
+      :duration="300"
+      :delay="50"
     />
     <p
       class="content"
       v-motion
       :initial="{ opacity: 0, y: 100 }"
       :visible-once="{ opacity: 1, y: 0 }"
-      :duration="500"
-      :delay="400"
+      :duration="300"
+      :delay="100"
     >
-      {{ headLine.content }}
+      Hello 👋 I'm Rakesh Kanna, Designer & Jr.Full Stack Developer
     </p>
 
     <div class="cta">
@@ -40,19 +40,20 @@
         v-motion
         :initial="{ opacity: 0, y: 50 }"
         :visible-once="{ opacity: 1, y: 0 }"
-        :duration="500"
-        :delay="600"
+        :duration="300"
+        :delay="150"
       />
       <EmailCopy
         v-motion
         :initial="{ opacity: 0, y: 50 }"
         :visible-once="{ opacity: 1, y: 0 }"
-        :duration="500"
-        :delay="800"
+        :duration="300"
+        :delay="200"
       />
     </div>
 
     <ContactForm
+      v-if="showForm"
       v-motion
       :initial="{ opacity: 0, y: 50 }"
       :visible-once="{ opacity: 1, y: 0 }"
@@ -70,16 +71,9 @@ import GlassButton from "./buttons/GlassButton.vue";
 import ContactForm from "./ContactForm.vue";
 import ProjHeadBtn from "./sub-components/ProjHeadBtn.vue";
 import EmailCopy from "./buttons/EmailCopy.vue";
-import { useFetchData } from "@/func/useFetchData";
 
 const showForm = ref(false);
-
-const url =
-  "https://rakeshkanna-rk.github.io/database/portfolio/headLines.json";
-const { data: headLine, isLoading, error } = useFetchData(url, "headLine");
-
 </script>
-
 
 <style scoped>
 .header {

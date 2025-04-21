@@ -24,13 +24,13 @@
           :delay="index * 200"
           :class="{ 'active-page': route.path === page.link }"
         >
-          <router-link
-            class="item wrap"
-            :to="page.link"
-            @click="closeMenu"
-          >
+          <router-link class="item wrap" :to="page.link" @click="closeMenu">
             <div class="img-holder">
-              <img class="icon" :src="`./icons/${page.icon}.svg`" :alt="page.title" />
+              <img
+                class="icon"
+                :src="`./icons/${page.icon}.svg`"
+                :alt="page.title"
+              />
             </div>
             <div class="wrapper">
               <a class="item" :href="page.link">{{ page.title }}</a>
@@ -64,7 +64,7 @@ export default {
   name: "MobiMenu",
   props: {
     pages: Array,
-  }
+  },
 };
 </script>
 

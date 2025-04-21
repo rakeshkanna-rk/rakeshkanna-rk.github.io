@@ -4,7 +4,7 @@
     src="@/assets/bg/bluelight-bg.avif"
     class="bg-img"
     alt="background image"
-    fetchpriority="high"
+    loading="lazy"
   />
 
   <div class="download-wrapper">

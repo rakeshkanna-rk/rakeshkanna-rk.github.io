@@ -1,22 +1,17 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "./pages/Home.vue";
-import About from "./pages/About.vue";
-import Links from "./pages/Links.vue";
-import NotFound from "./pages/NotFound.vue";
-import UnderDev from "./pages/UnderDev.vue";
-import DownloadFile from "./pages/DownloadFile.vue";
 
 const routes = createRouter({
   history: createWebHashHistory(), // ✅ Use hash mode
   routes: [
     { path: "/", name: "Home", component: Home },
-    { path: "/about", name: "About", component: About },
-    { path: "/projects", name: "Projects", component: UnderDev },
-    { path: "/blog", name: "Blog", component: UnderDev },
-    { path: "/links", name: "Link", component: Links },
-    {path: "/freebies", name: "Freebies", component: UnderDev},
-    {path: "/download/:fileName", name: "DownloadFile", component: DownloadFile,},
-    {path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound }, // 404 Route
+    { path: "/about", name: "About", component: () => import("./pages/About.vue") },
+    { path: "/projects", name: "Projects", component: () => import("./pages/UnderDev.vue") },
+    { path: "/blog", name: "Blog", component: () => import("./pages/UnderDev.vue") },
+    { path: "/links", name: "Link", component: () => import("./pages/Links.vue") },
+    { path: "/freebies", name: "Freebies", component: () => import("./pages/UnderDev.vue") },
+    { path: "/download/:fileName", name: "DownloadFile", component: () => import("./pages/DownloadFile.vue") },
+    { path: "/:pathMatch(.*)*", name: "NotFound", component: () => import("./pages/NotFound.vue") }, // 404 Route
   ],
 });
 

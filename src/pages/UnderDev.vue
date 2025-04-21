@@ -1,5 +1,5 @@
 <template>
-  <img src="@/assets/bg/shape-bg.svg" class="bg-img blur" alt="background image" />
+  <img src="@/assets/bg/shape-bg.svg" class="bg-img blur" alt="background image" loading="lazy"/>
   <div class="under-dev">
     <h1>Under Development</h1>
     <p>You will be able to see the page once it is developed</p>

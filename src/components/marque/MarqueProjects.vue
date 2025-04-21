@@ -13,10 +13,10 @@
         @mouseleave="hovered = null"
       >
         <img
-          :src="img"
+          :src="img.img"
           class="marquee-img"
           :class="{ clear: hovered === index }"
-          alt="marquee image"
+          :alt="img.title"
         />
       </div>
     </div>
@@ -34,7 +34,7 @@ import { ref, computed } from "vue";
 import { useRouter } from 'vue-router'
 import { useFetchData } from "@/func/useFetchData";
 
-const url = "https://rakeshkanna-rk.github.io/database/portfolio/projimgs.json";
+const url = "https://rakeshkanna-rk.github.io/database/portfolio/homeProjects.json";
 const { data: projimgs, isLoading, error } = useFetchData(url, "projimgs");
 
 const paused = ref(false);

@@ -15,7 +15,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
 import ProjectCard from "./sub-components/ProjectCard.vue";
 import {useFetchData} from "@/func/useFetchData";
 

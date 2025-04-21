@@ -4,12 +4,14 @@
     class="bg-img"
     id="desktop-bg"
     alt="background image"
+    loading="lazy"
   />
   <img 
     src="@/assets/bg/mobi-red-sidelight-bg.svg"
     class="bg-img"
     id="mobile-bg"
     alt="background image"
+    loading="lazy"
   />
   <div class="not-found">
     <h1>404</h1>

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <a class="glass-button" @click="$emit('openForm')">
+    <button class="glass-button" @click="$emit('openForm')">
       <p
         v-motion
         :initial="{ opacity: 0, x: 10 }"
         :visible-once="{ opacity: 1, x: 0 }"
-        :duration="500"
-        :delay="1000"
+        :duration="300"
+        :delay="500"
       >
         Connect
       </p>
@@ -14,18 +14,17 @@
         src="@/assets/arrow-right.svg"
         alt="arrow"
         v-motion
-        :initial="{ rotate: -90}"
-        :visible-once="{ rotate: 0}"
-        :duration="500"
-        :delay="1000"
+        :initial="{ rotate: -90 }"
+        :visible-once="{ rotate: 0 }"
+        :duration="300"
+        :delay="500"
       />
-    </a>
+    </button>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-
 const showForm = ref(false);
 </script>
 
@@ -36,6 +35,7 @@ const showForm = ref(false);
   padding: 0 0 0 15px;
   line-height: 0;
 }
+
 .glass-button {
   display: flex;
   flex-direction: row;
@@ -56,7 +56,10 @@ const showForm = ref(false);
   backdrop-filter: blur(6.5px);
 
   transition: color 0.5s ease-in;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.418);
 }
+
 .glass-button img {
   padding: 10px;
   background: #fff;
