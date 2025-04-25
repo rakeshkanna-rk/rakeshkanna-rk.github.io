@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import ProjectCard from "./sub-components/ProjectCard.vue";
+import ProjectCard from "./sub/ProjectCard.vue";
 import {useFetchData} from "@/func/useFetchData";
 
 const url =

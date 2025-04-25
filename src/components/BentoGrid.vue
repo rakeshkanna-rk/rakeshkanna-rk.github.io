@@ -28,9 +28,9 @@
 </template>
 
 <script setup>
-import HoverText from "./sub-components/HoverText.vue";
+import HoverText from "./sub/HoverText.vue";
 import MarqueTechStack from "./marque/MarqueTechStack.vue";
-import LogoWing from "./sub-components/LogoWing.vue";
+import LogoWing from "./sub/LogoWing.vue";
 import MarqueProjects from "./marque/MarqueProjects.vue";
 </script>
 

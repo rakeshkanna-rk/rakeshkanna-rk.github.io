@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import SocialLink from "./sub-components/SocialLink.vue";
+import SocialLink from "./sub/SocialLink.vue";
 import socialLinks from "../data/socialLinks.json";
 
 export default {

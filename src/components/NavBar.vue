@@ -54,9 +54,9 @@ const isMenuOpen = ref(false);
 <script>
 import socialLinks from "@/data/socialLinks.json";
 import pages from "@/data/pages.json";
-import SocialLink from "./sub-components/SocialLink.vue";
-import MobiMenu from "./sub-components/MobiMenu.vue";
-import LargeMenu from "./sub-components/LargeMenu.vue";
+import SocialLink from "./sub/SocialLink.vue";
+import MobiMenu from "./sub/MobiMenu.vue";
+import LargeMenu from "./sub/LargeMenu.vue";
 
 export default {
   name: "NavBar",

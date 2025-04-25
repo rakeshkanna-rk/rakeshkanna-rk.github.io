@@ -41,7 +41,7 @@
 <script setup>
 import HeadLine from "@/components/HeadLine.vue";
 import BentoGrid from "@/components/BentoGrid.vue";
-import SpinningWheel from "@/components/sub-components/SpinningWheel.vue";
+import SpinningWheel from "@/components/sub/SpinningWheel.vue";
 import MarqueText from "@/components/marque/MarqueText.vue";
 import SectionHeader from "@/components/SectionHeader.vue";
 import Showcase from "@/components/Showcase.vue";

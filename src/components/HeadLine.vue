@@ -66,10 +66,10 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import Shimmer from "./sub-components/Shimmer.vue";
+import Shimmer from "./sub/Shimmer.vue";
 import GlassButton from "./buttons/GlassButton.vue";
 import ContactForm from "./ContactForm.vue";
-import ProjHeadBtn from "./sub-components/ProjHeadBtn.vue";
+import ProjHeadBtn from "./sub/ProjHeadBtn.vue";
 import EmailCopy from "./buttons/EmailCopy.vue";
 
 const showForm = ref(false);
