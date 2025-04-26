@@ -29,7 +29,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 // Add paths (or route names) where you want to hide the footer
-const noFooterRoutes = ['NotFound'] // Use route names for clarity
+const noFooterRoutes = ['NotFound', 'Link'] // Use route names for clarity
 
 const showFooter = computed(() => {
   return !noFooterRoutes.includes(route.name)

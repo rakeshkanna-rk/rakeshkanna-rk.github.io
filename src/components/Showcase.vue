@@ -39,15 +39,7 @@
         </div>
 
         <ul class="tags">
-          <li
-            v-for="(tag, i) in activeProject.tags"
-            :key="i"
-            v-motion
-            :initial="{ opacity: 0, scale: 0.8 }"
-            :visible="{ opacity: 1, scale: 1 }"
-            :duration="500"
-            :delay="i * 100"
-          >
+          <li v-for="(tag, i) in activeProject.tags" :key="i">
             {{ tag }}
           </li>
         </ul>
@@ -74,9 +66,10 @@
 <script setup>
 import { ref, onMounted, computed, nextTick, watch } from "vue";
 import RotatingLink from "./buttons/RotaingLink.vue";
-import { useFetchData } from "@/func/useFetchData";
+import { useFetchData } from "@/composables/useFetchData";
 
-const url = "https://rakeshkanna-rk.github.io/database/portfolio/homeProjects.json";
+const url =
+  "https://rakeshkanna-rk.github.io/database/portfolio/homeProjects.json";
 const { data: projects, isLoading, error } = useFetchData(url, "homeProjects");
 
 const activeIndex = ref(0);

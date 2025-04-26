@@ -65,6 +65,10 @@ export default {
   text-decoration: none;
 }
 
+.menu-item:hover {
+  background: var(--glass-color-03);
+}
+
 @media screen and (max-width: 601px) {
   .menu {
     display: none;

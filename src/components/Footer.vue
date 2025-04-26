@@ -16,7 +16,6 @@ const footerLinks = [
     <div class="footer-content">
       <div class="footer-logo">
         <img src="@/assets/logo.svg" alt="logo" />
-        <h3>Rakesh Kanna</h3>
         <p>Crafting experiences where design meets seamless functionality.</p>
       </div>
       <div class="footer-nav-wrapper">
@@ -36,7 +35,7 @@ const footerLinks = [
   align-items: center;
   justify-content: center;
   background: var(--glass-color-05);
-  color: var(--footer-text-color, #fff);
+  color: var(--white-color);
   padding: 20px;
   text-align: center;
   font-family: var(--primary-font);
@@ -61,8 +60,14 @@ const footerLinks = [
 .footer-logo{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  
+  align-items: start;
+  max-width: 300px;
+}
+
+.footer-logo p{
+  text-align: left;
+  font-size: var(--h4);
+  font-weight: 400;
 }
 
 .footer-nav a {
@@ -73,5 +78,15 @@ const footerLinks = [
 
 .footer-nav a:hover {
   color: var(--blue-color); 
+}
+
+@media screen and (max-width: 600px) {
+  .footer-logo{
+    max-width: 200px;
+  }
+  
+  .footer{
+    padding-bottom: 100px;
+  }
 }
 </style>

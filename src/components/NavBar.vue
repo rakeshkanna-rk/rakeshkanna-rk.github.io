@@ -6,6 +6,7 @@
       src="../assets/logo.svg"
       title="logo"
       alt="logo"
+      @click="goToHome"
       v-motion
       v-once
       :initial="{ opacity: 0, y: -50 }"
@@ -49,6 +50,10 @@
 <script setup>
 import { ref } from "vue";
 const isMenuOpen = ref(false);
+
+function goToHome() {
+  window.location.href = "/";  
+}
 </script>
 
 <script>
@@ -101,6 +106,12 @@ export default {
 
 .handburger-menu {
   display: none;
+}
+
+.logo {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 601px) {

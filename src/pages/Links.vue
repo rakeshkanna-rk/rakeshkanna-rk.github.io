@@ -2,60 +2,60 @@
   <div class="page-wrapper">
     <!-- Background Image -->
     <img
-    src="@/assets/bg/light-bg.avif"
-    class="bg-img"
-    alt="background image"
-    fetchpriority="high"
-    loading="lazy"
+      src="@/assets/bg/light-bg.avif"
+      class="bg-img"
+      alt="background image"
+      fetchpriority="high"
+      loading="lazy"
     />
   </div>
-    
-    <!-- Foreground Content -->
-    <div class="header">
-      <img
-        src="@/assets/logos/profile-pic.webp"
-        alt="Logo"
+
+  <!-- Foreground Content -->
+  <div class="header">
+    <img
+      src="@/assets/logos/profile-pic.webp"
+      alt="Logo"
+      v-motion
+      :initial="{ opacity: 0, scale: 0.7 }"
+      :visible-once="{ opacity: 1, scale: 1 }"
+      :duration="500"
+    />
+    <h1
+      v-motion
+      :initial="{ opacity: 0, y: 100 }"
+      :visible-once="{ opacity: 1, y: 0 }"
+      :duration="500"
+    >
+      Designer | Developer
+    </h1>
+    <div class="cta">
+      <a
+        class="cta-link"
+        href="/"
         v-motion
-        :initial="{ opacity: 0, scale: 0.7 }"
-        :visible-once="{ opacity: 1, scale: 1 }"
-        :duration="500"
-      />
-      <h1
-        v-motion
-        :initial="{ opacity: 0, y: 100 }"
+        :initial="{ opacity: 0, y: 50 }"
         :visible-once="{ opacity: 1, y: 0 }"
-        :duration="500"
+        :duration="300"
       >
-        Designer | Developer
-      </h1>
-      <div class="cta">
-        <a
-          class="cta-link"
-          href="/"
-          v-motion
-          :initial="{ opacity: 0, y: 50 }"
-          :visible-once="{ opacity: 1, y: 0 }"
-          :duration="300"
-        >
-          <img src="icons/globe.svg" alt="globe"/>Website (Under Development)</a
-        >
-        <a
-          class="cta-link"
-          href="mailto:rakeshkanna0108@gmail.com"
-          target="_blank"
-          v-motion
-          :initial="{ opacity: 0, y: 50 }"
-          :visible-once="{ opacity: 1, y: 0 }"
-          :duration="300"
-        >
-          <img src="icons/mail.svg" alt="mail"/>
-          rakeshkanna0108@gmail.com
-        </a>
-      </div>
+        <img src="icons/globe.svg" alt="globe" />Website (Under Development)</a
+      >
+      <a
+        class="cta-link"
+        href="mailto:rakeshkanna0108@gmail.com"
+        target="_blank"
+        v-motion
+        :initial="{ opacity: 0, y: 50 }"
+        :visible-once="{ opacity: 1, y: 0 }"
+        :duration="300"
+      >
+        <img src="icons/mail.svg" alt="mail" />
+        rakeshkanna0108@gmail.com
+      </a>
     </div>
-    <div class="links-wrapper">
-      <div class="links" v-for="(link, index) in links" :key="index">
-        <component
+  </div>
+  <div class="links-wrapper">
+    <div class="links" v-for="(link, index) in links" :key="index">
+      <component
         :is="link.external === false ? 'router-link' : 'a'"
         :to="link.external === false ? link.link : null"
         :href="link.external !== false ? link.link : null"
@@ -66,7 +66,7 @@
         :duration="500"
         :delay="index * 200"
         class="link-item"
-        >
+      >
         <img :src="link.img" alt="Links" />
         {{ link.title }}
       </component>
@@ -76,16 +76,15 @@
 
 <script setup>
 // import links from "@/data/links.json";
-import { useFetchData } from "@/func/useFetchData";
-import { useHead } from "@vueuse/head"
+import { useFetchData } from "@/composables/useFetchData";
+import { useHead } from "@vueuse/head";
 
 const url = "https://rakeshkanna-rk.github.io/database/portfolio/links.json";
 const { data: links, isLoading, error } = useFetchData(url, "links");
 
 useHead({
   title: "Rakesh Kanna | Links",
-})
-
+});
 </script>
 
 <style scoped>
@@ -148,7 +147,7 @@ useHead({
   margin-right: 10px;
 }
 
-.links-wrapper{
+.links-wrapper {
   display: flex;
   flex-direction: column;
   padding: 20px 0 150px 0;
@@ -196,6 +195,4 @@ useHead({
   width: 30px;
   height: 30px;
 }
-
-
 </style>

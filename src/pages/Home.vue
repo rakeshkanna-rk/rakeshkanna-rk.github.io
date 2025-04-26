@@ -2,40 +2,48 @@
   <div id="home page-wrapper">
     <!-- Background Image -->
     <img
-    src="@/assets/bg/stone-bg.avif"
-    class="bg-img"
-    id="desktop-bg"
-    alt="background image"
-    fetchpriority="high"
+      src="@/assets/bg/stone-bg.avif"
+      class="bg-img"
+      id="desktop-bg"
+      alt="background image"
+      fetchpriority="high"
     />
     <img
-    src="@/assets/bg/mobi-stone-bg.avif"
-    class="bg-img"
-    id="mobile-bg"
-    alt="background image"
-    fetchpriority="high"
+      src="@/assets/bg/mobi-stone-bg.avif"
+      class="bg-img"
+      id="mobile-bg"
+      alt="background image"
+      fetchpriority="high"
     />
   </div>
-    
-    <SpinningWheel />
 
-    <div class="hero">
-      <HeadLine />
-    </div>
+  <SpinningWheel />
 
-    <BentoGrid />
+  <div class="hero">
+    <HeadLine />
+  </div>
 
-    <MarqueText />
+  <BentoGrid />
 
+  <MarqueText />
+
+  <SectionHeader
+    :subheading="'PROJECT SHOWCASE'"
+    :mainHeading="'Curated'"
+    :shimmerText="'Creations'"
+  />
+
+  <Showcase />
+  <ShowcaseMobi />
+
+  <div class="techstack">
     <SectionHeader
-      :subheading="'PROJECT SHOWCASE'"
-      :mainHeading="'Curated'"
-      :shimmerText="'Creations'"
+    :subheading="'TOOLS & TECHNOLOGIES'"
+    :mainHeading="'Tech'"
+    :shimmerText="'Stack'"
     />
-
-    <Showcase />
-
-    <ShowcaseMobi />
+  </div>
+  <TechStack />
 </template>
 
 <script setup>
@@ -46,6 +54,7 @@ import MarqueText from "@/components/marque/MarqueText.vue";
 import SectionHeader from "@/components/SectionHeader.vue";
 import Showcase from "@/components/Showcase.vue";
 import ShowcaseMobi from "@/components/ShowcaseMobi.vue";
+import TechStack from "@/components/TechStack.vue";
 
 import { useHead } from "@vueuse/head";
 
@@ -63,6 +72,10 @@ useHead({
   align-self: stretch;
   width: 100%;
   height: 80vh;
+}
+
+.techstack{
+  padding-top: 100px;
 }
 
 @media screen and (max-width: 601px) {

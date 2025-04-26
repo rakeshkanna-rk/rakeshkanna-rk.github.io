@@ -31,10 +31,11 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { useRouter } from 'vue-router'
-import { useFetchData } from "@/func/useFetchData";
+import { useRouter } from "vue-router";
+import { useFetchData } from "@/composables/useFetchData";
 
-const url = "https://rakeshkanna-rk.github.io/database/portfolio/homeProjects.json";
+const url =
+  "https://rakeshkanna-rk.github.io/database/portfolio/homeProjects.json";
 const { data: projimgs, isLoading, error } = useFetchData(url, "projimgs");
 
 const paused = ref(false);
@@ -42,7 +43,7 @@ const hovered = ref(null);
 const router = useRouter();
 
 const goToProjects = () => {
-  router.push({ path: '/projects' });
+  router.push({ path: "/projects" });
 };
 
 // ✅ Safely unwrap the images only if they're loaded
@@ -53,7 +54,6 @@ const doubleImages = computed(() => {
   return []; // fallback until data is ready
 });
 </script>
-
 
 <style scoped>
 .marquee-container {
@@ -123,18 +123,17 @@ const doubleImages = computed(() => {
 }
 
 .view-cta img {
-    padding: 10px;
-    background: var(--white-color);
-    backdrop-filter: blur(6.5px);
-    border-radius: 100px;
-    position: absolute;
-    right: 50px;
+  padding: 10px;
+  background: var(--white-color);
+  backdrop-filter: blur(6.5px);
+  border-radius: 100px;
+  position: absolute;
+  right: 50px;
 }
 
 @media screen and (max-width: 601px) {
   .marquee-img {
     filter: blur(0px);
   }
-  
 }
 </style>

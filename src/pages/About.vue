@@ -17,6 +17,7 @@
     loading="lazy"
   />
 
+  <AboutHeader />
   <div class="timeline-container">
     <TimelineItem />
   </div>
@@ -24,6 +25,7 @@
 
 <script setup>
 import TimelineItem from "../components/TimelineItem.vue";
+import AboutHeader from "@/components/AboutHeader.vue";
 import { useHead } from "@vueuse/head"
 
 useHead({

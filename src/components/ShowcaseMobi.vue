@@ -16,7 +16,7 @@
 
 <script setup>
 import ProjectCard from "./sub/ProjectCard.vue";
-import {useFetchData} from "@/func/useFetchData";
+import { useFetchData } from "@/composables/useFetchData";
 
 const url =
   "https://rakeshkanna-rk.github.io/database/portfolio/homeProjects.json";

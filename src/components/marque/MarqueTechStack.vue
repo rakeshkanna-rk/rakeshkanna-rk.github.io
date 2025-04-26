@@ -3,7 +3,7 @@
     <div class="marquee">
       <div class="marquee-content">
         <div v-for="(stack, index) in techStack" :key="index" class="grid-item">
-          <img :src="stack.img"  :alt="stack.name" />
+          <img :src="stack.img" :alt="stack.name" />
         </div>
         <!-- Duplicate content for smooth infinite scrolling -->
         <div
@@ -20,9 +20,10 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
-import { useFetchData } from "@/func/useFetchData";
+import { useFetchData } from "@/composables/useFetchData";
 
-const url = "https://rakeshkanna-rk.github.io/database/portfolio/TechStack.json";
+const url =
+  "https://rakeshkanna-rk.github.io/database/portfolio/TechStack.json";
 const { data: TechStack, isLoading, error } = useFetchData(url, "TechStack");
 
 const techStack = TechStack;

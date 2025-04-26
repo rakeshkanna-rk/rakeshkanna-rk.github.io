@@ -25,7 +25,7 @@
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
 import { watch } from "vue";
 // import timeline from "../data/timeline.json";
-import { useFetchData } from "@/func/useFetchData";
+import { useFetchData } from "@/composables/useFetchData";
 
 const url = "https://rakeshkanna-rk.github.io/database/portfolio/timeline.json";
 const { data: timeline, isLoading, error } = useFetchData(url, "timeline");
