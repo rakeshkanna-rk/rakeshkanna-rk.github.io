@@ -13,6 +13,12 @@ const router = createRouter({
     { path: "/download/:fileName", name: "DownloadFile", component: () => import("./pages/DownloadFile.vue") },
     { path: "/:pathMatch(.*)*", name: "NotFound", component: () => import("./pages/NotFound.vue") }, // 404 Route
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return { el: to.hash, behavior: "smooth" };
+    }
+    return { top: 0, behavior: "smooth" }; 
+  },
 });
 
 export default router;

@@ -7,7 +7,7 @@ const { data: techStack, isLoading, error } = useFetchData(url, "TechStack");
 </script>
 
 <template>
-  <div class="techstack-wrapper">
+  <div class="techstack-wrapper" id="skills">
     <div class="tech-stack">
       <div class="stack" v-for="(stack, index) in techStack" :key="index">
         <img :src="stack.img" :alt="stack.name" />
