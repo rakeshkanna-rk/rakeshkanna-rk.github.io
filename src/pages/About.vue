@@ -21,11 +21,20 @@
   <div class="timeline-container">
     <TimelineItem />
   </div>
+
+  <SectionHeader
+    :subheading="'TOOLS & TECHNOLOGIES'"
+    :mainHeading="'Tech'"
+    :shimmerText="'Stack'"
+    />
+  <TechStack />
 </template>
 
 <script setup>
 import TimelineItem from "../components/TimelineItem.vue";
 import AboutHeader from "@/components/AboutHeader.vue";
+import TechStack from "@/components/TechStack.vue";
+import SectionHeader from "@/components/SectionHeader.vue";
 import { useHead } from "@vueuse/head"
 
 useHead({

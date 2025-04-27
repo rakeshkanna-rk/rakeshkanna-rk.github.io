@@ -78,7 +78,7 @@ const activeProject = props.data;
 }
 
 .card h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 500;
   display: flex;
@@ -87,7 +87,7 @@ const activeProject = props.data;
 }
 
 .card .desc-list {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 0.7rem;
 }
