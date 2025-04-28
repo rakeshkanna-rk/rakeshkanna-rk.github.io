@@ -20,9 +20,16 @@ const activeTab = ref("design");
   <img
     src="@/assets/bg/stone-bg.avif"
     class="bg-img"
+    id="desktop-bg"
     alt="background image"
     fetchpriority="high"
-    loading="lazy"
+  />
+  <img
+    src="@/assets/bg/mobi-stone-bg.avif"
+    class="bg-img"
+    id="mobile-bg"
+    alt="background image"
+    fetchpriority="high"
   />
 
   <SectionHeader
