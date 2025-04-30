@@ -19,17 +19,18 @@ const truncateText = (text, length = 200) => {
 const cleanImageStyles = (html) => {
   const doc = new DOMParser().parseFromString(html, "text/html");
   doc.querySelectorAll("img").forEach((img) => {
-    img.removeAttribute("style");  // Removes inline style
-    img.style.width = "100%";      // Optional: force full width
-    img.style.height = "auto";     // Optional: reset height
+    img.removeAttribute("style"); // Removes inline style
+    img.style.width = "100%"; // Optional: force full width
+    img.style.height = "auto"; // Optional: reset height
   });
   return doc.body.innerHTML;
 };
 
-
 const getImageFromContent = (html) => {
   const match = html.match(/<img[^>]+src="([^">]+)"/);
-  return match ? match[1] : "https://via.placeholder.com/400x200?text=No+Image";
+  return match
+    ? match[1]
+    : "https://rakeshkanna-rk.github.io/database/img/img_placeholder.png";
 };
 
 onMounted(async () => {
@@ -81,9 +82,9 @@ const closePost = () => (activePost.value = null);
   />
 
   <SectionHeader
-    :subheading="'BLOG POSTS'"
-    :mainHeading="'Articles'"
-    :shimmerText="'Posts'"
+    :subheading="'BLOG SPACE'"
+    :mainHeading="'Fresh'"
+    :shimmerText="'Reads'"
   />
 
   <div class="blog-container">
@@ -185,7 +186,6 @@ const closePost = () => (activePost.value = null);
   .blog-card {
     padding: 1rem;
   }
-  
 }
 
 .blog-card h2 {
@@ -284,7 +284,6 @@ const closePost = () => (activePost.value = null);
   }
 }
 
-
 @media screen and (max-width: 601px) {
   .search-input {
     font-size: var(--h3);
@@ -332,7 +331,6 @@ const closePost = () => (activePost.value = null);
     padding: 2rem 1rem;
   }
 }
-
 
 /* Overlay content styling */
 .overlay .content {
@@ -383,7 +381,6 @@ const closePost = () => (activePost.value = null);
   -ms-overflow-style: none; /* IE 10+ */
 }
 
-
 .overlay .content a {
   color: var(--blue-color);
   text-decoration: underline;
@@ -392,7 +389,6 @@ const closePost = () => (activePost.value = null);
 .overlay .content figcaption {
   display: none;
 }
-
 
 .close-btn {
   position: absolute;

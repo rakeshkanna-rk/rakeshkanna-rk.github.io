@@ -9,6 +9,7 @@
     >
       <div class="marker"></div>
       <div class="content">
+        <img :src="item.icon" alt="icon" />
         <p class="period">{{ item.period }}</p>
         <h2>{{ item.title }}</h2>
         <p class="company">🧱 {{ item.company }}</p>
@@ -24,7 +25,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
 import { watch } from "vue";
-// import timeline from "../data/timeline.json";
 import { useFetchData } from "@/composables/useFetchData";
 
 const url = "https://rakeshkanna-rk.github.io/database/portfolio/timeline.json";
@@ -140,16 +140,7 @@ onUnmounted(() => {
     transform: translateY(0);
   }
 }
-/* .marker {
-  position: absolute;
-  left: -38px;
-  top: 10px;
-  width: 18px;
-  height: 18px;
-  background: #111;
-  border: 2px solid #fff;
-  border-radius: 50%;
-} */
+
 .content {
   background: var(--glass-color-05);
   backdrop-filter: blur(6.5px);
@@ -157,6 +148,12 @@ onUnmounted(() => {
   padding: 20px;
   border-radius: 10px;
   color: #fff;
+}
+
+.content img {
+  width: 50px;
+  border-radius: 20%;
+  right: 1rem;
 }
 
 h2 {

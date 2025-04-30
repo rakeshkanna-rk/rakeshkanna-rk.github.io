@@ -37,7 +37,7 @@
         :visible-once="{ opacity: 1, y: 0 }"
         :duration="300"
       >
-        <img src="icons/globe.svg" alt="globe" />Website (Under Development)</a
+        <img src="icons/globe.svg" alt="globe" />Portfolio Website</a
       >
       <a
         class="cta-link"

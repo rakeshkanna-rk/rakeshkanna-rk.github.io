@@ -12,21 +12,13 @@
 
   <!-- Foreground Content -->
   <div class="header">
-    <img
-      src="@/assets/logos/profile-pic.webp"
-      alt="Logo"
-      v-motion
-      :initial="{ opacity: 0, scale: 0.7 }"
-      :visible-once="{ opacity: 1, scale: 1 }"
-      :duration="500"
-    />
     <h1
       v-motion
       :initial="{ opacity: 0, y: 100 }"
       :visible-once="{ opacity: 1, y: 0 }"
       :duration="500"
     >
-      Designer | Developer
+      Freebies
     </h1>
     <div class="cta">
       <a
@@ -37,7 +29,7 @@
         :visible-once="{ opacity: 1, y: 0 }"
         :duration="300"
       >
-        <img src="icons/globe.svg" alt="globe" />Website (Under Development)</a
+        <img src="icons/globe.svg" alt="globe" />Portfolio Website</a
       >
       <a
         class="cta-link"
@@ -103,7 +95,7 @@ useHead({
 .header h1 {
   font-family: var(--primary-font);
   color: var(--white-color);
-  font-size: var(--h3);
+  font-size: var(--h1);
 }
 
 .header img {
