@@ -1,6 +1,7 @@
 <script setup>
 import SectionHeader from "@/components/SectionHeader.vue";
 import ProjectCard from "@/components/sub/ProjectCard.vue";
+import FeedBack from "@/components/FeedBack.vue";
 import { useFetchData } from "@/composables/useFetchData";
 import { ref } from "vue";
 
@@ -75,6 +76,13 @@ const activeTab = ref("design");
       </div>
     </div>
   </div>
+
+  <SectionHeader
+    :subheading="'REAL STORIES'"
+    :mainHeading="'Voices'"
+    :shimmerText="'Heard'"
+  />
+  <FeedBack />
 </template>
 
 <style scoped>

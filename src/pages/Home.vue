@@ -44,6 +44,13 @@
     />
   </div>
   <TechStack />
+
+  <SectionHeader
+    :subheading="'REAL STORIES'"
+    :mainHeading="'Voices'"
+    :shimmerText="'Heard'"
+  />
+  <FeedBack />
 </template>
 
 <script setup>
@@ -55,6 +62,7 @@ import SectionHeader from "@/components/SectionHeader.vue";
 import Showcase from "@/components/Showcase.vue";
 import ShowcaseMobi from "@/components/ShowcaseMobi.vue";
 import TechStack from "@/components/TechStack.vue";
+import FeedBack from "@/components/FeedBack.vue";
 
 import { useHead } from "@vueuse/head";
 

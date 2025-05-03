@@ -28,13 +28,21 @@
     :shimmerText="'Stack'"
     />
   <TechStack />
+
+  <SectionHeader
+    :subheading="'REAL STORIES'"
+    :mainHeading="'Voices'"
+    :shimmerText="'Heard'"
+  />
+  <FeedBack />
 </template>
 
 <script setup>
-import TimelineItem from "../components/TimelineItem.vue";
+import TimelineItem from "@/components/TimelineItem.vue";
 import AboutHeader from "@/components/AboutHeader.vue";
 import TechStack from "@/components/TechStack.vue";
 import SectionHeader from "@/components/SectionHeader.vue";
+import FeedBack from "@/components/FeedBack.vue";
 import { useHead } from "@vueuse/head"
 
 useHead({
